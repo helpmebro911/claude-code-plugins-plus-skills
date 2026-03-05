@@ -5,12 +5,6 @@
   "targets": {
     "claude-code-plugins-io": {
       "hosting": {
-        "tonsofskills": [
-          "tonsofskills-com"
-        ],
-        "claudecodeplugins-redirect": [
-          "claude-code-plugins-io"
-        ],
         "marketplace": [
           "claude-code-plugins-io"
         ],
