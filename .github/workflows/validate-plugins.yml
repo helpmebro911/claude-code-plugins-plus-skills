@@ -593,10 +593,9 @@ jobs:
           path: marketplace/test-results/**/video.webm
           retention-days: 7
 
-  # Production E2E Tests (live site)
+  # Production E2E Tests (live site — no build needed)
   production-e2e:
     runs-on: ubuntu-latest
-    needs: marketplace-validation
     steps:
       - uses: actions/checkout@v6
 
