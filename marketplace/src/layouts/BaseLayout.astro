@@ -234,14 +234,23 @@ const currentPath = Astro.url.pathname;
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 1rem 4rem;
+            padding: 0.75rem 3rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
             z-index: 100;
-            background: var(--surface);
-            border-bottom: 1px solid var(--border);
+            background: transparent;
+            border-bottom: 1px solid transparent;
             backdrop-filter: blur(12px);
+            transition: background var(--duration-fast) var(--ease-out),
+                        border-color var(--duration-fast) var(--ease-out),
+                        box-shadow var(--duration-fast) var(--ease-out);
+        }
+
+        nav.scrolled {
+            background: var(--surface);
+            border-bottom-color: var(--border);
+            box-shadow: 0 1px 4px oklch(0% 0 0 / 0.2);
         }
 
         .logo {
@@ -545,7 +554,7 @@ const currentPath = Astro.url.pathname;
         /* Mobile Styles */
         @media (max-width: 768px) {
             nav {
-                padding: 1rem 1.5rem;
+                padding: 0.75rem 1.5rem;
             }
 
             .mobile-menu-toggle {
@@ -805,6 +814,23 @@ const currentPath = Astro.url.pathname;
                 }
             });
         });
+    </script>
+
+    <!-- Nav Scroll State -->
+    <script is:inline>
+        (function() {
+            var nav = document.querySelector('nav');
+            if (!nav) return;
+            function onScroll() {
+                if (window.scrollY > 20) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            }
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+        })();
     </script>
 
     <!-- Mobile Menu Script -->

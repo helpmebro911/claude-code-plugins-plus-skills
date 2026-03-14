@@ -18,10 +18,19 @@ const pageDescription = `Search all ${searchIndex.stats.totalPlugins} plugins an
     }
 
     .explorer-hero {
-      background: linear-gradient(135deg, var(--navy) 0%, #0a1628 100%);
+      background: var(--surface);
       color: var(--text);
-      padding: 4rem 4rem 3rem;
+      padding: 3.5rem 3rem 2.5rem;
       text-align: center;
+      position: relative;
+    }
+
+    .explorer-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 20% 0%, oklch(62% 0.16 35 / 0.08) 0%, transparent 60%);
+      pointer-events: none;
     }
 
     .explorer-title {
@@ -78,6 +87,7 @@ const pageDescription = `Search all ${searchIndex.stats.totalPlugins} plugins an
       font-weight: 700;
       font-size: 1.2rem;
       display: block;
+      font-family: 'DM Mono', monospace;
     }
 
     /* Filters Section */
@@ -197,9 +207,9 @@ const pageDescription = `Search all ${searchIndex.stats.totalPlugins} plugins an
     }
 
     .result-card:hover {
-      border-color: var(--gold);
-      transform: translateY(-4px);
-      box-shadow: 0 8px 24px rgba(234, 170, 0, 0.1);
+      border-color: var(--primary-border);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px oklch(0% 0 0 / 0.25);
     }
 
     .result-card-link {
@@ -285,6 +295,7 @@ const pageDescription = `Search all ${searchIndex.stats.totalPlugins} plugins an
       border-radius: 4px;
       font-size: 0.65rem;
       font-weight: 700;
+      font-family: 'DM Mono', monospace;
       text-transform: uppercase;
       letter-spacing: 0.03em;
     }
@@ -383,7 +394,7 @@ const pageDescription = `Search all ${searchIndex.stats.totalPlugins} plugins an
       padding: 0.35rem 0.75rem;
       font-size: 0.7rem;
       font-weight: 700;
-      font-family: 'Source Sans 3', system-ui, sans-serif;
+      font-family: 'DM Mono', monospace;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       border-radius: 6px;

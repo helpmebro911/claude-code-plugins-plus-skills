@@ -39,6 +39,7 @@
   --text-xl:   clamp(1.5rem, 1.2rem + 1vw, 2rem);
   --text-2xl:  clamp(2rem, 1.5rem + 1.5vw, 3rem);
   --text-3xl:  clamp(2.5rem, 2rem + 2vw, 4rem);
+  --text-4xl:  clamp(3rem, 2.5rem + 3vw, 5rem);
 
   /* ── 4pt Spacing Grid ── */
   --space-1: 0.25rem;  /* 4px */
@@ -67,6 +68,8 @@
   --card-featured-padding: var(--space-6);
   --card-featured-radius: var(--radius-xl);
 
+  --card-dense-padding: var(--space-3);
+
   /* ── Motion ── */
   --ease-out: cubic-bezier(0.25, 1, 0.5, 1);
   --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
@@ -75,6 +78,11 @@
   --duration-fast: 200ms;
   --duration-normal: 300ms;
   --duration-slow: 500ms;
+
+  /* ── Primary tints (for borders/bgs at opacity) ── */
+  --primary-border: oklch(62% 0.16 35 / 0.3);
+  --primary-tint: oklch(62% 0.16 35 / 0.1);
+  --primary-tint-border: oklch(62% 0.16 35 / 0.2);
 
   /* ── Hover choreography ── */
   --card-transition: transform var(--duration-fast) var(--ease-out), box-shadow var(--duration-normal) var(--ease-out), border-color var(--duration-fast) var(--ease-out);
@@ -90,7 +98,7 @@
   --text-line-height: 1.5;
 
   /* ── Grid ── */
-  --grid-gap: var(--space-5);  /* 24px — consistent everywhere */
+  --grid-gap: var(--space-4);  /* 16px — tight, data-dense */
   --grid-min-card: 300px;      /* minmax base for auto-fill grids */
 }
 

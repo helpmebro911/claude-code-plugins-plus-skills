@@ -45,31 +45,16 @@ const totalHooks = searchIndex.stats.totalHooks || 0;
             overflow-x: hidden;
         }
 
-        /* Animated background grain */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-            opacity: 0.025;
-            pointer-events: none;
-            z-index: 1000;
-        }
-
         /* ========================================
            HERO — minimal, centered, dark
            ======================================== */
         .hero {
-            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
             text-align: left;
-            padding: 8rem 4rem 5rem;
+            padding: 5rem 3rem 2rem;
             position: relative;
             max-width: 1200px;
             margin: 0 auto;
@@ -84,17 +69,36 @@ const totalHooks = searchIndex.stats.totalHooks || 0;
             gap: 0;
         }
 
-        /* H1 — Instrument Sans, large, solid primary color */
+        /* H1 — Instrument Sans, large, split color */
         .hero h1 {
             font-family: 'Instrument Sans', system-ui, sans-serif;
-            font-size: var(--text-3xl);
+            font-size: var(--text-4xl);
             font-weight: 700;
             line-height: 0.95;
-            letter-spacing: -0.02em;
+            letter-spacing: -0.04em;
             margin: 0 0 1.5rem;
             color: var(--primary);
             animation: fadeInUp 0.7s var(--ease-out) forwards;
             opacity: 0;
+        }
+
+        .hero-text-muted { color: var(--text); }
+        .hero-text-primary { color: var(--primary); }
+
+        /* Spotlight eyebrow pill */
+        .spotlight-badge {
+            display: inline-block;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--primary);
+            background: var(--primary-tint);
+            border: 1px solid var(--primary-tint-border);
+            padding: 0.35rem 0.75rem;
+            border-radius: 9999px;
+            margin-bottom: 1rem;
         }
 
         /* Subtitle */
@@ -291,8 +295,8 @@ const totalHooks = searchIndex.stats.totalHooks || 0;
         /* Stats bar */
         .stats-bar {
             display: flex;
-            gap: 3rem;
-            justify-content: center;
+            gap: 2rem;
+            justify-content: flex-start;
             margin-bottom: 2.5rem;
             animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
             opacity: 0;
@@ -307,7 +311,7 @@ const totalHooks = searchIndex.stats.totalHooks || 0;
 
         .stats-number {
             font-family: 'DM Mono', monospace;
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: 700;
             color: var(--gold);
             line-height: 1;
@@ -325,11 +329,10 @@ const totalHooks = searchIndex.stats.totalHooks || 0;
         .install-box {
             width: 100%;
             max-width: 650px;
-            margin: 0 auto;
-            padding: 2rem;
+            padding: 1.5rem;
             background: var(--surface-2);
             border: 1.5px solid var(--border);
-            border-radius: 16px;
+            border-radius: 12px;
             animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
             opacity: 0;
         }
@@ -361,13 +364,13 @@ const totalHooks = searchIndex.stats.totalHooks || 0;
            FEATURES SECTION
            ======================================== */
         .features {
-            padding: 8rem 4rem;
+            padding: 3rem 2rem;
             background: var(--surface);
         }
 
         .section-label {
             font-family: 'DM Mono', monospace;
-            color: var(--gold);
+            color: var(--primary);
             font-size: 0.75rem;
             font-weight: 500;
             letter-spacing: 0.15em;
@@ -376,10 +379,10 @@ const totalHooks = searchIndex.stats.totalHooks || 0;
         }
 
         .section-title {
-            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
             font-weight: 600;
             letter-spacing: -0.02em;
-            margin-bottom: 4rem;
+            margin-bottom: 2rem;
             max-width: 700px;
             line-height: 1.2;
             color: var(--text);
@@ -388,14 +391,14 @@ const totalHooks = searchIndex.stats.totalHooks || 0;
         .features-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2.5rem;
+            gap: 1.5rem;
         }
 
         .feature-card {
-            padding: 2.5rem;
+            padding: 2rem;
             background: var(--surface-2);
             border: 1px solid var(--border);
-            border-radius: 16px;
+            border-radius: 14px;
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             position: relative;
             overflow: hidden;
@@ -426,9 +429,17 @@ const totalHooks = searchIndex.stats.totalHooks || 0;
         }
 
         .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            display: block;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background: oklch(62% 0.16 35 / 0.1);
+            border-radius: 10px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .feature-card h3 {
@@ -449,7 +460,7 @@ const totalHooks = searchIndex.stats.totalHooks || 0;
            ======================================== */
         .client-showcase {
             background: var(--surface-1);
-            padding: 3rem 0;
+            padding: 2rem 0;
             overflow: hidden;
         }
 
@@ -505,7 +516,7 @@ const totalHooks = searchIndex.stats.totalHooks || 0;
            SAAS SKILL PACKS SECTION
            ======================================== */
         .saas-packs-section {
-            padding: 4rem 2rem;
+            padding: 3rem 2rem;
             background: var(--surface);
         }
 
@@ -701,7 +712,7 @@ const totalHooks = searchIndex.stats.totalHooks || 0;
            COWORK DOWNLOADS SECTION (Homepage)
            ======================================== */
         .cowork-home-section {
-            padding: 4rem 2rem;
+            padding: 3rem 2rem;
             background: var(--surface-2);
         }
 
@@ -774,7 +785,7 @@ const totalHooks = searchIndex.stats.totalHooks || 0;
            EMAIL SIGNUP SECTION
            ======================================== */
         .signup-section {
-            padding: 5rem 2rem;
+            padding: 3rem 2rem;
             background: var(--surface);
         }
 
@@ -850,7 +861,7 @@ const totalHooks = searchIndex.stats.totalHooks || 0;
            PRODUCTS & SERVICES SECTION
            ======================================== */
         .products-section {
-            padding: 4rem 2rem;
+            padding: 3rem 2rem;
             background: var(--surface);
         }
 
@@ -1004,6 +1015,41 @@ const totalHooks = searchIndex.stats.totalHooks || 0;
         }
 
         /* ========================================
+           SCROLL REVEAL ANIMATIONS
+           ======================================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out);
+        }
+
+        .reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-stagger > * {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out);
+        }
+
+        .reveal-stagger.revealed > *:nth-child(1) { transition-delay: 0ms; }
+        .reveal-stagger.revealed > *:nth-child(2) { transition-delay: 80ms; }
+        .reveal-stagger.revealed > *:nth-child(3) { transition-delay: 160ms; }
+        .reveal-stagger.revealed > *:nth-child(4) { transition-delay: 240ms; }
+        .reveal-stagger.revealed > *:nth-child(5) { transition-delay: 320ms; }
+        .reveal-stagger.revealed > *:nth-child(6) { transition-delay: 400ms; }
+        .reveal-stagger.revealed > *:nth-child(7) { transition-delay: 480ms; }
+        .reveal-stagger.revealed > *:nth-child(8) { transition-delay: 560ms; }
+        .reveal-stagger.revealed > *:nth-child(9) { transition-delay: 640ms; }
+
+        .reveal-stagger.revealed > * {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ========================================
            MOBILE RESPONSIVE
            ======================================== */
         @media (max-width: 768px) {
@@ -1115,7 +1161,7 @@ const totalHooks = searchIndex.stats.totalHooks || 0;
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-inner">
-            <h1>TONS OF SKILLS</h1>
+            <h1><span class="hero-text-muted">TONS OF</span><br/><span class="hero-text-primary">SKILLS</span></h1>
 
             <p class="hero-subtitle">
                 Agent skills for Claude Code. Search {totalSkills} skills across {totalPlugins} plugins.
@@ -1199,10 +1245,12 @@ const totalHooks = searchIndex.stats.totalHooks || 0;
     </section>
 
     <!-- Killer Skills This Week -->
-    <section class="killer-skills-section" style="padding: 5rem 2rem; background: var(--surface);">
-        <div style="max-width: 1100px; margin: 0 auto; text-align: center;">
-            <div class="section-label">THIS WEEK'S PICKS</div>
-            <h2 class="section-title" style="margin-left: auto; margin-right: auto;">Killer Skills</h2>
+    <section class="killer-skills-section" style="padding: 3rem 2rem; background: var(--surface);">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <span class="spotlight-badge">OPEN SOURCE SPOTLIGHT</span>
+            <h2 class="section-title" style="text-align: left;">Killer Skills This Week</h2>
+            <p style="color: var(--text-2); margin-bottom: 0.5rem; max-width: 500px;">Top-graded skills from community creators, handpicked weekly.</p>
+            <a href="/community" style="color: var(--primary); text-decoration: none; font-weight: 600; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.25rem; margin-bottom: 1.5rem;">Meet the contributors <span style="transition: transform 0.2s; display: inline-block;">&rarr;</span></a>
             <KillerSkills />
         </div>
     </section>
@@ -1286,7 +1334,7 @@ const totalHooks = searchIndex.stats.totalHooks || 0;
                 </p>
             </div>
 
-            <div class="saas-grid">
+            <div class="saas-grid reveal-stagger">
                 <!-- Supabase Pack -->
                 <div class="saas-card" data-accent="#3ECF8E">
                     <div class="saas-card-header">
@@ -1465,7 +1513,7 @@ const totalHooks = searchIndex.stats.totalHooks || 0;
     </section>
 
     <!-- Learn with Jeremy -->
-    <section class="products-section" id="training" style="padding: 4rem 2rem;">
+    <section class="products-section" id="training" style="padding: 3rem 2rem;">
         <div style="text-align: center;">
             <div class="section-label">Learn with Jeremy</div>
             <h2 class="section-title" style="margin-left: auto; margin-right: auto;">Level Up Your Claude Code Skills</h2>
@@ -1491,7 +1539,7 @@ const totalHooks = searchIndex.stats.totalHooks || 0;
     </section>
 
     <!-- Quick-Start Collections -->
-    <section class="features" style="padding: 4rem 2rem;">
+    <section class="features" style="padding: 3rem 2rem;">
         <div class="section-label">Quick Start</div>
         <h2 class="section-title">Curated Plugin Collections</h2>
         <p style="color: var(--text-2); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
@@ -1514,7 +1562,7 @@ const totalHooks = searchIndex.stats.totalHooks || 0;
         <div class="section-label">Why Choose Our Marketplace</div>
         <h2 class="section-title">Community-driven, production-ready plugins</h2>
 
-        <div class="features-grid">
+        <div class="features-grid reveal-stagger">
             <div class="feature-card">
                 <div class="feature-icon">🚀</div>
                 <h3>{totalPlugins} Plugins</h3>
@@ -1550,7 +1598,7 @@ const totalHooks = searchIndex.stats.totalHooks || 0;
 
     <!-- Email Signup -->
     <section class="signup-section">
-        <div class="signup-inner">
+        <div class="signup-inner reveal">
             <div class="section-label">STAY SHARP</div>
             <h2 class="section-title signup-title">Agent Skills in Your Inbox</h2>
             <p class="signup-desc">Weekly deep-dives on agent skills, new plugin drops, and workflow tips.</p>
@@ -1619,26 +1667,18 @@ const totalHooks = searchIndex.stats.totalHooks || 0;
             });
         });
 
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
+        // Scroll reveal observer
+        var revealObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.classList.add('revealed');
+                    revealObserver.unobserve(entry.target);
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-        document.querySelectorAll('.feature-card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-            observer.observe(el);
+        document.querySelectorAll('.reveal, .reveal-stagger').forEach(function(el) {
+            revealObserver.observe(el);
         });
 
         // Copy install command(s) on click
@@ -1720,6 +1760,37 @@ const totalHooks = searchIndex.stats.totalHooks || 0;
         if (searchInput) {
             searchInput.addEventListener('focus', redirectToExplore);
         }
+    </script>
+
+    <script is:inline>
+        // Animated stat counters on viewport entry
+        function animateCounter(el, target) {
+            var duration = 1200;
+            var startTime = null;
+            function step(timestamp) {
+                if (!startTime) startTime = timestamp;
+                var progress = Math.min((timestamp - startTime) / duration, 1);
+                var eased = 1 - Math.pow(1 - progress, 3);
+                el.textContent = Math.floor(eased * target).toLocaleString();
+                if (progress < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+        }
+
+        var statsObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.querySelectorAll('.stats-number').forEach(function(num) {
+                        var val = parseInt(num.textContent.replace(/,/g, ''), 10);
+                        if (!isNaN(val) && val > 0) animateCounter(num, val);
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        var statsBar = document.querySelector('.stats-bar');
+        if (statsBar) statsObserver.observe(statsBar);
     </script>
 
     <!-- Stack Builder Component -->
