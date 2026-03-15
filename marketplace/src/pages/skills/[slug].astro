@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import DetailCta from '../../components/DetailCta.astro';
 import skillsCatalog from '../../data/skills-catalog.json';
 
 export async function getStaticPaths() {
@@ -22,10 +23,24 @@ const authorName = skill.author && typeof skill.author === 'string'
   ? skill.author.split('<')[0].trim()
   : 'Unknown';
 
-// Related skills from the same plugin category
+const installCommand = `/plugin install ${skill.parentPlugin.name}@claude-code-plugins-plus`;
+
+// Compatible platforms
+const compatibleWith: string[] = (skill as any).compatibleWith || [];
+
+// Stats bar items
+const statsItems: Array<{ label: string; value: string }> = [];
+if (skill.allowedTools?.length) statsItems.push({ label: 'Tools', value: String(skill.allowedTools.length) });
+statsItems.push({ label: 'Plugin', value: skill.parentPlugin.name });
+statsItems.push({ label: 'Category', value: skill.parentPlugin.category.replace(/-/g, ' ') });
+
+// Related skills — 6 from same category, with tool pills
 const relatedSkills = (skillsCatalog as any).skills
   .filter((s: any) => s.parentPlugin?.category === skill.parentPlugin?.category && s.slug !== skill.slug)
-  .slice(0, 4);
+  .slice(0, 6);
+
+const cleanTools = (tools: string[]) =>
+  tools?.map((t: string) => t.replace(/^"|"$/g, '')).filter((t: string) => t.length > 0) || [];
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
@@ -76,6 +91,7 @@ const relatedSkills = (skillsCatalog as any).skills
       gap: 1.5rem;
       font-size: 0.875rem;
       color: var(--brand-mid-gray);
+      margin-bottom: 1rem;
     }
 
     .metadata-item {
@@ -88,6 +104,65 @@ const relatedSkills = (skillsCatalog as any).skills
       width: 18px;
       height: 18px;
       color: var(--brand-mid-gray);
+    }
+
+    /* Compatible platforms */
+    .platform-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .platform-pill {
+      font-family: 'DM Mono', 'SF Mono', Monaco, monospace;
+      font-size: 0.75rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      background: var(--surface-3, var(--brand-light-gray));
+      color: var(--text-2, var(--brand-mid-gray));
+      border: 1px solid var(--border, var(--brand-light-gray));
+    }
+
+    /* Stats Bar */
+    .stats-bar {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      padding: 1rem 1.5rem;
+      background: var(--card);
+      border: 1px solid var(--brand-light-gray);
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      overflow-x: auto;
+      font-family: 'DM Mono', 'SF Mono', Monaco, monospace;
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.2rem;
+      white-space: nowrap;
+    }
+
+    .stat-value {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--brand-dark);
+    }
+
+    .stat-label {
+      font-size: 0.7rem;
+      color: var(--brand-mid-gray);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .stats-divider {
+      width: 1px;
+      height: 2rem;
+      background: var(--brand-light-gray);
+      flex-shrink: 0;
     }
 
     .section-box {
@@ -320,11 +395,13 @@ const relatedSkills = (skillsCatalog as any).skills
       color: var(--brand-mid-gray);
     }
 
-    .skill-footer code {
-      background: var(--brand-light-gray);
-      padding: 0.15rem 0.5rem;
-      border-radius: 4px;
-      font-size: 0.75rem;
+    .skill-footer a {
+      color: var(--brand-orange);
+      text-decoration: none;
+    }
+
+    .skill-footer a:hover {
+      text-decoration: underline;
     }
 
     .related-skills-section {
@@ -370,6 +447,23 @@ const relatedSkills = (skillsCatalog as any).skills
       font-size: 0.8rem;
       color: var(--brand-mid-gray);
       line-height: 1.4;
+      margin-bottom: 0.5rem;
+    }
+
+    .related-skill-tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
+
+    .related-tool-pill {
+      font-family: 'DM Mono', 'SF Mono', Monaco, monospace;
+      font-size: 0.65rem;
+      padding: 0.1rem 0.35rem;
+      border-radius: 3px;
+      background: rgba(234, 170, 0, 0.1);
+      color: var(--brand-orange);
+      border: 1px solid rgba(234, 170, 0, 0.15);
     }
 
     @media (max-width: 768px) {
@@ -383,6 +477,11 @@ const relatedSkills = (skillsCatalog as any).skills
 
       .plugin-info {
         flex-direction: column;
+      }
+
+      .stats-bar {
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
       }
     }
   </style>
@@ -408,12 +507,13 @@ const relatedSkills = (skillsCatalog as any).skills
   })} />
 
   <div class="skill-detail">
+    <!-- 1. Breadcrumbs -->
     <Breadcrumbs crumbs={[
       { label: 'Skills', href: '/skills/' },
       { label: skill.name },
     ]} />
 
-    <!-- Header -->
+    <!-- 2. Header (enhanced) -->
     <header class="skill-header">
       <h1>{skill.name}</h1>
       {skill.description && <p class="skill-description">{skill.description}</p>}
@@ -438,9 +538,32 @@ const relatedSkills = (skillsCatalog as any).skills
           <span>{skill.license}</span>
         </div>
       </div>
+
+      {compatibleWith.length > 0 && (
+        <div class="platform-pills" style="margin-top: 1rem;">
+          {compatibleWith.map((platform: string) => (
+            <span class="platform-pill">{platform}</span>
+          ))}
+        </div>
+      )}
     </header>
 
-    <!-- Allowed Tools -->
+    <!-- 3. Stats Bar -->
+    {statsItems.length > 0 && (
+      <div class="stats-bar">
+        {statsItems.map((stat, i) => (
+          <>
+            {i > 0 && <span class="stats-divider" aria-hidden="true" />}
+            <div class="stat-item">
+              <span class="stat-value">{stat.value}</span>
+              <span class="stat-label">{stat.label}</span>
+            </div>
+          </>
+        ))}
+      </div>
+    )}
+
+    <!-- 4. Allowed Tools -->
     <section class="section-box highlight">
       <h2 class="section-title">Allowed Tools</h2>
       <div class="tools-grid">
@@ -453,7 +576,7 @@ const relatedSkills = (skillsCatalog as any).skills
       )}
     </section>
 
-    <!-- Provided by Plugin -->
+    <!-- 5. Provided by Plugin -->
     <section class="section-box">
       <h2 class="section-title">Provided by Plugin</h2>
       <div class="plugin-info">
@@ -471,15 +594,15 @@ const relatedSkills = (skillsCatalog as any).skills
       </div>
     </section>
 
-    <!-- Installation -->
+    <!-- 6. Installation -->
     <section class="section-box dark">
       <h2 class="section-title">Installation</h2>
       <p class="install-note" style="color: var(--brand-light-gray); margin-bottom: 0.75rem;">This skill is included in the {skill.parentPlugin.name} plugin:</p>
-      <pre class="install-command" data-copy={`/plugin install ${skill.parentPlugin.name}@claude-code-plugins-plus`}><code>/plugin install {skill.parentPlugin.name}@claude-code-plugins-plus</code></pre>
+      <pre class="install-command" data-copy={installCommand}><code>{installCommand}</code></pre>
       <p class="install-note">Click to copy</p>
     </section>
 
-    <!-- Skill Content (Markdown) -->
+    <!-- 7. Skill Content (Markdown) -->
     <section class="skill-content-section">
       <h2>Instructions</h2>
       <div class="skill-content">
@@ -487,7 +610,10 @@ const relatedSkills = (skillsCatalog as any).skills
       </div>
     </section>
 
-    <!-- Related Skills -->
+    <!-- 8. Bottom CTA -->
+    <DetailCta installCommand={installCommand} pluginName={skill.parentPlugin.name} />
+
+    <!-- 9. Related Skills (6, with tool pills) -->
     {relatedSkills.length > 0 && (
       <section class="related-skills-section">
         <h2 class="related-skills-heading">Related Skills</h2>
@@ -496,15 +622,22 @@ const relatedSkills = (skillsCatalog as any).skills
             <a href={`/skills/${related.slug}/`} class="related-skill-card">
               <h3 class="related-skill-title">{related.name}</h3>
               <p class="related-skill-description">{related.description?.split('.')[0]}.</p>
+              {cleanTools(related.allowedTools || []).length > 0 && (
+                <div class="related-skill-tools">
+                  {cleanTools(related.allowedTools).slice(0, 3).map((tool: string) => (
+                    <span class="related-tool-pill">{tool}</span>
+                  ))}
+                </div>
+              )}
             </a>
           ))}
         </div>
       </section>
     )}
 
-    <!-- Footer -->
+    <!-- 10. Footer -->
     <footer class="skill-footer">
-      <p>Skill file: <code>{skill.filePath}</code></p>
+      <p>Part of <a href={`/plugins/${skill.parentPlugin.name}/`}>{skill.parentPlugin.name}</a></p>
     </footer>
   </div>
 
@@ -515,7 +648,7 @@ const relatedSkills = (skillsCatalog as any).skills
         const text = this.dataset.copy || this.textContent;
         navigator.clipboard.writeText(text).then(() => {
           const originalText = this.textContent;
-          this.textContent = '✓ Copied to clipboard!';
+          this.textContent = 'Copied to clipboard!';
           this.style.color = 'var(--brand-green)';
           setTimeout(() => {
             this.textContent = originalText;
