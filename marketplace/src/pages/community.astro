@@ -21,31 +21,21 @@ communityPlugins.forEach(plugin => {
 });
 const contributors = [...contributorMap.values()].sort((a, b) => b.plugins.length - a.plugins.length);
 
-// Deterministic color from name for avatar initials
-function nameToColor(name: string): string {
-  let hash = 0;
-  for (let i = 0; i < name.length; i++) {
-    hash = name.charCodeAt(i) + ((hash << 5) - hash);
+function getContributionSummary(plugins: any[]): string {
+  if (plugins.length === 1) {
+    const desc = plugins[0].description || '';
+    const sentence = desc.split('.')[0];
+    return sentence ? `${sentence}.` : 'Contributed a community plugin.';
   }
-  const hue = Math.abs(hash) % 360;
-  return `hsl(${hue}, 45%, 35%)`;
-}
-
-function getInitials(name: string): string {
-  const parts = name.split(' ').filter(Boolean);
-  if (parts.length > 1) {
-    return (parts[0][0] + (parts[1][0] || '')).toUpperCase();
-  }
-  return name.slice(0, 2).toUpperCase();
-}
-
-function getTopPluginSummary(plugins: any[]): string {
-  const names = plugins.slice(0, 3).map(p => p.displayName || p.name);
-  const remaining = plugins.length - 3;
-  if (remaining > 0) {
-    return `${names.join(', ')}, and ${remaining} more`;
-  }
-  return names.join(', ');
+  const catMap = new Map();
+  plugins.forEach(p => {
+    const cat = p.category?.replace(/-/g, ' ') || 'general';
+    catMap.set(cat, (catMap.get(cat) || 0) + 1);
+  });
+  const cats = [...catMap.entries()].sort((a, b) => b[1] - a[1]);
+  const topCats = cats.slice(0, 2).map(([cat, n]: [string, number]) => n > 1 ? `${n} ${cat}` : cat);
+  const suffix = cats.length > 2 ? ' and more' : '';
+  return `Contributed ${plugins.length} plugins: ${topCats.join(' and ')}${suffix}.`;
 }
 ---
 
@@ -53,7 +43,7 @@ function getTopPluginSummary(plugins: any[]): string {
   <style>
     /* ── Hero ── */
     .community-hero {
-      background: linear-gradient(135deg, var(--navy) 0%, #0a1628 100%);
+      background: linear-gradient(135deg, var(--navy) 0%, var(--surface) 100%);
       color: var(--text);
       padding: 3rem 2rem 2rem;
       text-align: center;
@@ -147,22 +137,8 @@ function getTopPluginSummary(plugins: any[]): string {
 
     .contributor-header {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 0.75rem;
-    }
-
-    .contributor-avatar {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-weight: 700;
-      font-size: 0.85rem;
-      flex-shrink: 0;
-      letter-spacing: 0.02em;
     }
 
     .contributor-info {
@@ -185,9 +161,6 @@ function getTopPluginSummary(plugins: any[]): string {
       color: var(--text-2);
       line-height: var(--text-line-height, 1.5);
       margin-top: 0.25rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
     }
 
     .contributor-count {
@@ -200,7 +173,7 @@ function getTopPluginSummary(plugins: any[]): string {
 
     .toggle-chevron {
       color: var(--text-3);
-      transition: transform 0.2s ease;
+      transition: transform var(--duration-fast) var(--ease-out);
       flex-shrink: 0;
       font-size: 1rem;
     }
@@ -213,7 +186,7 @@ function getTopPluginSummary(plugins: any[]): string {
     .contributor-detail {
       display: grid;
       grid-template-rows: 0fr;
-      transition: grid-template-rows 0.3s ease;
+      transition: grid-template-rows var(--duration-normal) var(--ease-out);
     }
 
     .contributor-card.expanded .contributor-detail {
@@ -236,7 +209,7 @@ function getTopPluginSummary(plugins: any[]): string {
       border-bottom: 1px solid var(--border);
       text-decoration: none;
       color: inherit;
-      transition: background 0.15s ease;
+      transition: background var(--duration-fast) var(--ease-out);
     }
 
     .contributor-plugin-row:last-child {
@@ -374,7 +347,7 @@ function getTopPluginSummary(plugins: any[]): string {
       font-weight: 600;
       font-size: 0.95rem;
       text-decoration: none;
-      transition: all 0.2s;
+      transition: all var(--duration-fast) var(--ease-out);
     }
 
     .cta-btn-primary {
@@ -404,6 +377,9 @@ function getTopPluginSummary(plugins: any[]): string {
       .hero-stat span { font-size: 1.1rem; }
       .section-container { padding: 2rem 1rem; }
       .contributors-grid { grid-template-columns: 1fr; }
+      .contributor-card { padding: 1rem 1.25rem; }
+      .contributor-name { font-size: 1rem; }
+      .contributor-summary { font-size: 0.8rem; }
       .plugins-grid { grid-template-columns: 1fr; }
     }
   </style>
@@ -444,15 +420,9 @@ function getTopPluginSummary(plugins: any[]): string {
           aria-label={`${contrib.name}, ${contrib.plugins.length} plugins`}
         >
           <div class="contributor-header">
-            <div
-              class="contributor-avatar"
-              style={`background: ${nameToColor(contrib.name)}`}
-            >
-              {getInitials(contrib.name)}
-            </div>
             <div class="contributor-info">
               <div class="contributor-name">{contrib.name}</div>
-              <div class="contributor-summary">{getTopPluginSummary(contrib.plugins)}</div>
+              <div class="contributor-summary">{getContributionSummary(contrib.plugins)}</div>
             </div>
             <div class="contributor-count">
               {contrib.plugins.length} plugin{contrib.plugins.length !== 1 ? 's' : ''}

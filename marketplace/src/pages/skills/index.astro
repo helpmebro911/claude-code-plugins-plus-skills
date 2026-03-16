@@ -77,10 +77,10 @@ const lightweightSkills = skillsCatalog.skills.map(skill => ({
       width: 100%;
       padding: 0.75rem 1rem;
       border: 2px solid var(--border);
-      border-radius: 8px;
+      border-radius: var(--radius-md);
       font-size: 0.95rem;
-      font-family: 'Lora', Georgia, serif;
-      transition: all 0.2s var(--transition-smooth);
+      font-family: 'Source Sans 3', system-ui, sans-serif;
+      transition: all var(--duration-fast) var(--ease-out);
     }
 
     .filter-input:focus {
@@ -112,7 +112,7 @@ const lightweightSkills = skillsCatalog.skills.map(skill => ({
       font-size: 0.875rem;
       font-weight: 600;
       cursor: pointer;
-      transition: color 0.2s;
+      transition: color var(--duration-fast) var(--ease-out);
     }
 
     .clear-filters-btn:hover {
@@ -135,10 +135,10 @@ const lightweightSkills = skillsCatalog.skills.map(skill => ({
       display: block;
       padding: 1.5rem;
       background: var(--card);
-      border-radius: 12px;
+      border-radius: var(--radius-lg);
       border: 2px solid var(--border);
       text-decoration: none;
-      transition: all 0.3s var(--transition-smooth);
+      transition: all var(--duration-normal) var(--ease-out);
     }
 
     .skill-card:hover {
@@ -178,7 +178,7 @@ const lightweightSkills = skillsCatalog.skills.map(skill => ({
       color: var(--primary-dark);
       font-size: 0.75rem;
       font-weight: 600;
-      border-radius: 6px;
+      border-radius: var(--radius-sm);
       font-family: 'Source Sans 3', system-ui, sans-serif;
     }
 
@@ -229,11 +229,11 @@ const lightweightSkills = skillsCatalog.skills.map(skill => ({
       background: var(--primary);
       color: white;
       border: none;
-      border-radius: 8px;
+      border-radius: var(--radius-md);
       font-size: 0.95rem;
       font-weight: 600;
       cursor: pointer;
-      transition: all 0.2s;
+      transition: all var(--duration-fast) var(--ease-out);
     }
 
     .no-results button:hover {

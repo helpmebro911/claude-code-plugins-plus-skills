@@ -109,7 +109,7 @@ Enforced by `scripts/check-performance.mjs` in CI:
 
 | Budget | Limit |
 |--------|-------|
-| Total bundle (gzipped) | 16 MB |
+| Total bundle (gzipped) | 18 MB |
 | Largest file (gzipped) | 550 KB |
 | Build time | < 10s |
 | Route count | 1,600–2,000 |
