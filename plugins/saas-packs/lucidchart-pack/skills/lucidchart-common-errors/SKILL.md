@@ -1,0 +1,111 @@
+---
+name: lucidchart-common-errors
+description: |
+  Diagnose and fix Lucidchart common errors and exceptions.
+  Use when encountering Lucidchart errors, debugging failed requests,
+  or troubleshooting integration issues.
+  Trigger with phrases like "lucidchart error", "fix lucidchart",
+  "lucidchart not working", "debug lucidchart".
+allowed-tools: Read, Grep, Bash(curl:*)
+version: 1.0.0
+license: MIT
+author: Jeremy Longshore <jeremy@intentsolutions.io>
+---
+
+# Lucidchart Common Errors
+
+## Overview
+Quick reference for the top 10 most common Lucidchart errors and their solutions.
+
+## Prerequisites
+- Lucidchart SDK installed
+- API credentials configured
+- Access to error logs
+
+## Instructions
+
+### Step 1: Identify the Error
+Check error message and code in your logs or console.
+
+### Step 2: Find Matching Error Below
+Match your error to one of the documented cases.
+
+### Step 3: Apply Solution
+Follow the solution steps for your specific error.
+
+## Output
+- Identified error cause
+- Applied fix
+- Verified resolution
+
+## Error Handling
+
+### Authentication Failed
+**Error Message:**
+```
+Authentication error: Invalid API key
+```
+
+**Cause:** API key is missing, expired, or invalid.
+
+**Solution:**
+```bash
+# Verify API key is set
+echo $LUCIDCHART_API_KEY
+```
+
+---
+
+### Rate Limit Exceeded
+**Error Message:**
+```
+Rate limit exceeded. Please retry after X seconds.
+```
+
+**Cause:** Too many requests in a short period.
+
+**Solution:**
+Implement exponential backoff. See `lucidchart-rate-limits` skill.
+
+---
+
+### Network Timeout
+**Error Message:**
+```
+Request timeout after 30000ms
+```
+
+**Cause:** Network connectivity or server latency issues.
+
+**Solution:**
+```typescript
+// Increase timeout
+const client = new Client({ timeout: 60000 });
+```
+
+## Examples
+
+### Quick Diagnostic Commands
+```bash
+# Check Lucidchart status
+curl -s https://status.lucidchart.com
+
+# Verify API connectivity
+curl -I https://api.lucidchart.com
+
+# Check local configuration
+env | grep LUCIDCHART
+```
+
+### Escalation Path
+1. Collect evidence with `lucidchart-debug-bundle`
+2. Check Lucidchart status page
+3. Contact support with request ID
+
+## Resources
+- [Lucidchart Status Page](https://status.lucidchart.com)
+- [Lucidchart Support](https://docs.lucidchart.com/support)
+- [Lucidchart Error Codes](https://docs.lucidchart.com/errors)
+
+## Next Steps
+For comprehensive debugging, see `lucidchart-debug-bundle`.

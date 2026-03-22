@@ -217,6 +217,11 @@ def generate_pack(company: str, dry_run: bool = False) -> bool:
     skills_dir = pack_dir / "skills"
     plugin_dir = pack_dir / ".claude-plugin"
 
+    # Skip existing packs unless --force
+    if pack_dir.exists() and (skills_dir / f"{company}-install-auth" / "SKILL.md").exists():
+        print(f"  SKIP: {pack_dir} already exists (use --force to overwrite)")
+        return True
+
     if dry_run:
         print(f"  [DRY RUN] Would create: {pack_dir}")
         print(f"  [DRY RUN] Would create {len(slots)} skills")
@@ -236,6 +241,8 @@ def generate_pack(company: str, dry_run: bool = False) -> bool:
         skill_name = f"{company}-{skill_slug}"
         skill_dir = skills_dir / skill_name
         skill_dir.mkdir(parents=True, exist_ok=True)
+        # Create references/ directory for progressive disclosure
+        (skill_dir / "references").mkdir(exist_ok=True)
 
         template_file = f"{slot}.md.j2"
         try:
@@ -279,6 +286,7 @@ def main():
     parser.add_argument("company", nargs="?", help="Company name (e.g., supabase)")
     parser.add_argument("--all", action="store_true", help="Generate all packs from TRACKER.csv")
     parser.add_argument("--dry-run", action="store_true", help="Show what would be generated")
+    parser.add_argument("--force", action="store_true", help="Overwrite existing packs")
     args = parser.parse_args()
 
     if args.all:

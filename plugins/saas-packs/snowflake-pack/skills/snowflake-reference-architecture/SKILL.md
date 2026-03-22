@@ -1,0 +1,238 @@
+---
+name: snowflake-reference-architecture
+description: |
+  Implement Snowflake reference architecture with best-practice project layout.
+  Use when designing new Snowflake integrations, reviewing project structure,
+  or establishing architecture standards for Snowflake applications.
+  Trigger with phrases like "snowflake architecture", "snowflake best practices",
+  "snowflake project structure", "how to organize snowflake", "snowflake layout".
+allowed-tools: Read, Grep
+version: 1.0.0
+license: MIT
+author: Jeremy Longshore <jeremy@intentsolutions.io>
+---
+
+# Snowflake Reference Architecture
+
+## Overview
+Production-ready architecture patterns for Snowflake integrations.
+
+## Prerequisites
+- Understanding of layered architecture
+- Snowflake SDK knowledge
+- TypeScript project setup
+- Testing framework configured
+
+## Project Structure
+
+```
+my-snowflake-project/
+├── src/
+│   ├── snowflake/
+│   │   ├── client.ts           # Singleton client wrapper
+│   │   ├── config.ts           # Environment configuration
+│   │   ├── types.ts            # TypeScript types
+│   │   ├── errors.ts           # Custom error classes
+│   │   └── handlers/
+│   │       ├── webhooks.ts     # Webhook handlers
+│   │       └── events.ts       # Event processing
+│   ├── services/
+│   │   └── snowflake/
+│   │       ├── index.ts        # Service facade
+│   │       ├── sync.ts         # Data synchronization
+│   │       └── cache.ts        # Caching layer
+│   ├── api/
+│   │   └── snowflake/
+│   │       └── webhook.ts      # Webhook endpoint
+│   └── jobs/
+│       └── snowflake/
+│           └── sync.ts         # Background sync job
+├── tests/
+│   ├── unit/
+│   │   └── snowflake/
+│   └── integration/
+│       └── snowflake/
+├── config/
+│   ├── snowflake.development.json
+│   ├── snowflake.staging.json
+│   └── snowflake.production.json
+└── docs/
+    └── snowflake/
+        ├── SETUP.md
+        └── RUNBOOK.md
+```
+
+## Layer Architecture
+
+```
+┌─────────────────────────────────────────┐
+│             API Layer                    │
+│   (Controllers, Routes, Webhooks)        │
+├─────────────────────────────────────────┤
+│           Service Layer                  │
+│  (Business Logic, Orchestration)         │
+├─────────────────────────────────────────┤
+│          Snowflake Layer        │
+│   (Client, Types, Error Handling)        │
+├─────────────────────────────────────────┤
+│         Infrastructure Layer             │
+│    (Cache, Queue, Monitoring)            │
+└─────────────────────────────────────────┘
+```
+
+## Key Components
+
+### Step 1: Client Wrapper
+```typescript
+// src/snowflake/client.ts
+export class SnowflakeService {
+  private client: SnowflakeClient;
+  private cache: Cache;
+  private monitor: Monitor;
+
+  constructor(config: SnowflakeConfig) {
+    this.client = new SnowflakeClient(config);
+    this.cache = new Cache(config.cacheOptions);
+    this.monitor = new Monitor('snowflake');
+  }
+
+  async get(id: string): Promise<Resource> {
+    return this.cache.getOrFetch(id, () =>
+      this.monitor.track('get', () => this.client.get(id))
+    );
+  }
+}
+```
+
+### Step 2: Error Boundary
+```typescript
+// src/snowflake/errors.ts
+export class SnowflakeServiceError extends Error {
+  constructor(
+    message: string,
+    public readonly code: string,
+    public readonly retryable: boolean,
+    public readonly originalError?: Error
+  ) {
+    super(message);
+    this.name = 'SnowflakeServiceError';
+  }
+}
+
+export function wrapSnowflakeError(error: unknown): SnowflakeServiceError {
+  // Transform SDK errors to application errors
+}
+```
+
+### Step 3: Health Check
+```typescript
+// src/snowflake/health.ts
+export async function checkSnowflakeHealth(): Promise<HealthStatus> {
+  try {
+    const start = Date.now();
+    await snowflakeClient.ping();
+    return {
+      status: 'healthy',
+      latencyMs: Date.now() - start,
+    };
+  } catch (error) {
+    return { status: 'unhealthy', error: error.message };
+  }
+}
+```
+
+## Data Flow Diagram
+
+```
+User Request
+     │
+     ▼
+┌─────────────┐
+│   API       │
+│   Gateway   │
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐    ┌─────────────┐
+│   Service   │───▶│   Cache     │
+│   Layer     │    │   (Redis)   │
+└──────┬──────┘    └─────────────┘
+       │
+       ▼
+┌─────────────┐
+│ Snowflake    │
+│   Client    │
+└──────┬──────┘
+       │
+       ▼
+┌─────────────┐
+│ Snowflake    │
+│   API       │
+└─────────────┘
+```
+
+## Configuration Management
+
+```typescript
+// config/snowflake.ts
+export interface SnowflakeConfig {
+  apiKey: string;
+  environment: 'development' | 'staging' | 'production';
+  timeout: number;
+  retries: number;
+  cache: {
+    enabled: boolean;
+    ttlSeconds: number;
+  };
+}
+
+export function loadSnowflakeConfig(): SnowflakeConfig {
+  const env = process.env.NODE_ENV || 'development';
+  return require(`./snowflake.${env}.json`);
+}
+```
+
+## Instructions
+
+### Step 1: Create Directory Structure
+Set up the project layout following the reference structure above.
+
+### Step 2: Implement Client Wrapper
+Create the singleton client with caching and monitoring.
+
+### Step 3: Add Error Handling
+Implement custom error classes for Snowflake operations.
+
+### Step 4: Configure Health Checks
+Add health check endpoint for Snowflake connectivity.
+
+## Output
+- Structured project layout
+- Client wrapper with caching
+- Error boundary implemented
+- Health checks configured
+
+## Error Handling
+| Issue | Cause | Solution |
+|-------|-------|----------|
+| Circular dependencies | Wrong layering | Separate concerns by layer |
+| Config not loading | Wrong paths | Verify config file locations |
+| Type errors | Missing types | Add Snowflake types |
+| Test isolation | Shared state | Use dependency injection |
+
+## Examples
+
+### Quick Setup Script
+```bash
+# Create reference structure
+mkdir -p src/snowflake/{handlers} src/services/snowflake src/api/snowflake
+touch src/snowflake/{client,config,types,errors}.ts
+touch src/services/snowflake/{index,sync,cache}.ts
+```
+
+## Resources
+- [Snowflake SDK Documentation](https://docs.snowflake.com/sdk)
+- [Snowflake Best Practices](https://docs.snowflake.com/best-practices)
+
+## Flagship Skills
+For multi-environment setup, see `snowflake-multi-env-setup`.

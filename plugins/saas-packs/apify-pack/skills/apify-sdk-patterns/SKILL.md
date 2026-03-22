@@ -1,0 +1,147 @@
+---
+name: apify-sdk-patterns
+description: |
+  Apply production-ready Apify SDK patterns for TypeScript and Python.
+  Use when implementing Apify integrations, refactoring SDK usage,
+  or establishing team coding standards for Apify.
+  Trigger with phrases like "apify SDK patterns", "apify best practices",
+  "apify code patterns", "idiomatic apify".
+allowed-tools: Read, Write, Edit
+version: 1.0.0
+license: MIT
+author: Jeremy Longshore <jeremy@intentsolutions.io>
+---
+
+# Apify SDK Patterns
+
+## Overview
+Production-ready patterns for Apify SDK usage in TypeScript and Python.
+
+## Prerequisites
+- Completed `apify-install-auth` setup
+- Familiarity with async/await patterns
+- Understanding of error handling best practices
+
+## Instructions
+
+### Step 1: Implement Singleton Pattern (Recommended)
+```typescript
+// src/apify/client.ts
+import { ApifyClient } from '@apify/sdk';
+
+let instance: ApifyClient | null = null;
+
+export function getApifyClient(): ApifyClient {
+  if (!instance) {
+    instance = new ApifyClient({
+      apiKey: process.env.APIFY_API_KEY!,
+      // Additional options
+    });
+  }
+  return instance;
+}
+```
+
+### Step 2: Add Error Handling Wrapper
+```typescript
+import { ApifyError } from '@apify/sdk';
+
+async function safeApifyCall<T>(
+  operation: () => Promise<T>
+): Promise<{ data: T | null; error: Error | null }> {
+  try {
+    const data = await operation();
+    return { data, error: null };
+  } catch (err) {
+    if (err instanceof ApifyError) {
+      console.error({
+        code: err.code,
+        message: err.message,
+      });
+    }
+    return { data: null, error: err as Error };
+  }
+}
+```
+
+### Step 3: Implement Retry Logic
+```typescript
+async function withRetry<T>(
+  operation: () => Promise<T>,
+  maxRetries = 3,
+  backoffMs = 1000
+): Promise<T> {
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      return await operation();
+    } catch (err) {
+      if (attempt === maxRetries) throw err;
+      const delay = backoffMs * Math.pow(2, attempt - 1);
+      await new Promise(r => setTimeout(r, delay));
+    }
+  }
+  throw new Error('Unreachable');
+}
+```
+
+## Output
+- Type-safe client singleton
+- Robust error handling with structured logging
+- Automatic retry with exponential backoff
+- Runtime validation for API responses
+
+## Error Handling
+| Pattern | Use Case | Benefit |
+|---------|----------|---------|
+| Safe wrapper | All API calls | Prevents uncaught exceptions |
+| Retry logic | Transient failures | Improves reliability |
+| Type guards | Response validation | Catches API changes |
+| Logging | All operations | Debugging and monitoring |
+
+## Examples
+
+### Factory Pattern (Multi-tenant)
+```typescript
+const clients = new Map<string, ApifyClient>();
+
+export function getClientForTenant(tenantId: string): ApifyClient {
+  if (!clients.has(tenantId)) {
+    const apiKey = getTenantApiKey(tenantId);
+    clients.set(tenantId, new ApifyClient({ apiKey }));
+  }
+  return clients.get(tenantId)!;
+}
+```
+
+### Python Context Manager
+```python
+from contextlib import asynccontextmanager
+from apify import ApifyClient
+
+@asynccontextmanager
+async def get_apify_client():
+    client = ApifyClient()
+    try:
+        yield client
+    finally:
+        await client.close()
+```
+
+### Zod Validation
+```typescript
+import { z } from 'zod';
+
+const apifyResponseSchema = z.object({
+  id: z.string(),
+  status: z.enum(['active', 'inactive']),
+  createdAt: z.string().datetime(),
+});
+```
+
+## Resources
+- [Apify SDK Reference](https://docs.apify.com/sdk)
+- [Apify API Types](https://docs.apify.com/types)
+- [Zod Documentation](https://zod.dev/)
+
+## Next Steps
+Apply patterns in `apify-core-workflow-a` for real-world usage.

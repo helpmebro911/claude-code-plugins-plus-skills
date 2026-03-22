@@ -1,0 +1,17 @@
+{
+  "name": "snowflake-pack",
+  "version": "1.0.0",
+  "description": "Claude Code skill pack for Snowflake (30 skills)",
+  "author": {
+    "name": "Jeremy Longshore",
+    "email": "jeremy@intentsolutions.io"
+  },
+  "license": "MIT",
+  "keywords": [
+    "snowflake",
+    "snowflake",
+    "saas",
+    "sdk",
+    "integration"
+  ]
+}

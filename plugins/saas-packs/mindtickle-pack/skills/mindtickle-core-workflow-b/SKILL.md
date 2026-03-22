@@ -1,0 +1,71 @@
+---
+name: mindtickle-core-workflow-b
+description: |
+  Execute Mindtickle secondary workflow: Core Workflow B.
+  Use when implementing secondary use case,
+  or complementing primary workflow.
+  Trigger with phrases like "mindtickle secondary workflow",
+  "secondary task with mindtickle".
+allowed-tools: Read, Write, Edit, Bash(npm:*), Grep
+version: 1.0.0
+license: MIT
+author: Jeremy Longshore <jeremy@intentsolutions.io>
+---
+
+# Mindtickle Core Workflow B
+
+## Overview
+Secondary workflow for Mindtickle. Complements the primary workflow.
+
+## Prerequisites
+- Completed `mindtickle-install-auth` setup
+- Familiarity with `mindtickle-core-workflow-a`
+- Valid API credentials configured
+
+## Instructions
+
+### Step 1: Setup
+```typescript
+// Step 1 implementation
+```
+
+### Step 2: Process
+```typescript
+// Step 2 implementation
+```
+
+### Step 3: Complete
+```typescript
+// Step 3 implementation
+```
+
+## Output
+- Completed Core Workflow B execution
+- Results from Mindtickle API
+- Success confirmation or error details
+
+## Error Handling
+| Aspect | Workflow A | Workflow B |
+|--------|------------|------------|
+| Use Case | Primary | Secondary |
+| Complexity | Medium | Lower |
+| Performance | Standard | Optimized |
+
+## Examples
+
+### Complete Workflow
+```typescript
+// Complete workflow example
+```
+
+### Error Recovery
+```typescript
+// Error handling code
+```
+
+## Resources
+- [Mindtickle Documentation](https://docs.mindtickle.com)
+- [Mindtickle API Reference](https://docs.mindtickle.com/api)
+
+## Next Steps
+For common errors, see `mindtickle-common-errors`.

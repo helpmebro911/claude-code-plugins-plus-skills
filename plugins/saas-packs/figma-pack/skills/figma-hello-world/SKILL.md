@@ -1,0 +1,96 @@
+---
+name: figma-hello-world
+description: |
+  Create a minimal working Figma example.
+  Use when starting a new Figma integration, testing your setup,
+  or learning basic Figma API patterns.
+  Trigger with phrases like "figma hello world", "figma example",
+  "figma quick start", "simple figma code".
+allowed-tools: Read, Write, Edit
+version: 1.0.0
+license: MIT
+author: Jeremy Longshore <jeremy@intentsolutions.io>
+---
+
+# Figma Hello World
+
+## Overview
+Minimal working example demonstrating core Figma functionality.
+
+## Prerequisites
+- Completed `figma-install-auth` setup
+- Valid API credentials configured
+- Development environment ready
+
+## Instructions
+
+### Step 1: Create Entry File
+Create a new file for your hello world example.
+
+### Step 2: Import and Initialize Client
+```typescript
+import { FigmaClient } from '@figma/sdk';
+
+const client = new FigmaClient({
+  apiKey: process.env.FIGMA_API_KEY,
+});
+```
+
+### Step 3: Make Your First API Call
+```typescript
+async function main() {
+  // Your first API call here
+}
+
+main().catch(console.error);
+```
+
+## Output
+- Working code file with Figma client initialization
+- Successful API response confirming connection
+- Console output showing:
+```
+Success! Your Figma connection is working.
+```
+
+## Error Handling
+| Error | Cause | Solution |
+|-------|-------|----------|
+| Import Error | SDK not installed | Verify with `npm list` or `pip show` |
+| Auth Error | Invalid credentials | Check environment variable is set |
+| Timeout | Network issues | Increase timeout or check connectivity |
+| Rate Limit | Too many requests | Wait and retry with exponential backoff |
+
+## Examples
+
+### TypeScript Example
+```typescript
+import { FigmaClient } from '@figma/sdk';
+
+const client = new FigmaClient({
+  apiKey: process.env.FIGMA_API_KEY,
+});
+
+async function main() {
+  // Your first API call here
+}
+
+main().catch(console.error);
+```
+
+### Python Example
+```python
+from figma import FigmaClient
+
+client = FigmaClient()
+
+# Your first API call here
+```
+
+## Resources
+- [Figma Getting Started](https://docs.figma.com/getting-started)
+- [Figma API Reference](https://docs.figma.com/api)
+- [Figma Examples](https://docs.figma.com/examples)
+
+## Next Steps
+Proceed to `figma-local-dev-loop` for development workflow setup.
