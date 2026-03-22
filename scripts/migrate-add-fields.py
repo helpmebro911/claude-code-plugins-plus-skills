@@ -283,7 +283,7 @@ def infer_tags(skill_path: Path, frontmatter: dict) -> list[str]:
             company_tag = SAAS_COMPANY_TAGS.get(company_key, company_key)
             tags.append(company_tag)
         except IndexError:
-            pass
+            pass  # No company directory in path — skip SaaS tag
 
     # --- 3. Description keyword tags ---
     description = str(frontmatter.get("description", "")).lower()
