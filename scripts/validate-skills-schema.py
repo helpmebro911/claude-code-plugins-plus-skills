@@ -850,8 +850,6 @@ def validate_command(path: Path) -> Dict[str, Any]:
 
 # === AGENT VALIDATION ===
 
-VALID_EXPERTISE = ['intermediate', 'advanced', 'expert']
-VALID_PRIORITIES = ['low', 'medium', 'high', 'critical']
 VALID_EFFORT_LEVELS = ['low', 'medium', 'high', 'max']
 
 
@@ -867,13 +865,12 @@ def find_agent_files(root: Path) -> List[Path]:
 
 
 def validate_agent(path: Path) -> Dict[str, Any]:
-    """Validate an agent markdown file."""
+    """Validate an agent markdown file against Anthropic 2026 spec."""
     try:
         content = path.read_text(encoding='utf-8')
     except Exception as e:
         return {'fatal': f'Cannot read file: {e}'}
 
-    # Extract frontmatter
     m = RE_FRONTMATTER.match(content)
     if not m:
         return {'fatal': 'No frontmatter found'}
@@ -886,67 +883,75 @@ def validate_agent(path: Path) -> Dict[str, Any]:
     errors: List[str] = []
     warnings: List[str] = []
 
-    # Required: name
-    if 'name' not in fm:
-        errors.append("[agent] Missing required field: name")
-    else:
-        name = str(fm['name'])
-        if not re.match(r'^[a-z][a-z0-9-]*[a-z0-9]$', name) and len(name) > 1:
-            warnings.append("[agent] 'name' should be kebab-case")
+    # Detect context (plugin vs standalone)
+    _, context = detect_component(path)
+    is_plugin_agent = context == 'plugin'
 
-    # Required: description (20 chars min for agents)
-    if 'description' not in fm:
-        errors.append("[agent] Missing required field: description")
-    else:
-        desc = str(fm['description'])
+    # Required fields (Anthropic spec)
+    for field_name, field_def in AGENT_FIELDS.items():
+        if field_def.get('required') and field_name not in fm:
+            errors.append(f"[agent] Missing required field: {field_name}")
+
+    # Validate present fields against schema
+    for field_name, value in fm.items():
+        if field_name in AGENT_FIELDS:
+            field_def = AGENT_FIELDS[field_name]
+
+            # Type checking
+            expected_type = field_def.get('type')
+            if expected_type == 'string' and not isinstance(value, str):
+                errors.append(f"[agent] '{field_name}' must be a string, got: {type(value).__name__}")
+            elif expected_type == 'integer' and not isinstance(value, int):
+                errors.append(f"[agent] '{field_name}' must be an integer, got: {type(value).__name__}")
+            elif expected_type == 'boolean' and not isinstance(value, bool):
+                errors.append(f"[agent] '{field_name}' must be a boolean, got: {type(value).__name__}")
+            elif expected_type == 'array' and not isinstance(value, list):
+                errors.append(f"[agent] '{field_name}' must be an array, got: {type(value).__name__}")
+            elif expected_type == 'object' and not isinstance(value, dict):
+                errors.append(f"[agent] '{field_name}' must be an object, got: {type(value).__name__}")
+
+            # Value validation
+            if 'valid' in field_def and isinstance(value, str):
+                if value not in field_def['valid']:
+                    errors.append(f"[agent] '{field_name}' value '{value}' not valid. Must be one of: {', '.join(field_def['valid'])}")
+
+            # Plugin-restricted fields
+            if is_plugin_agent and field_name in AGENT_PLUGIN_RESTRICTED:
+                warnings.append(f"[agent] '{field_name}' is not supported in plugin agents (ignored by runtime)")
+
+        elif field_name in INVALID_AGENT_FIELDS:
+            errors.append(f"[agent] Invalid field '{field_name}': {INVALID_AGENT_FIELDS[field_name]}")
+        else:
+            warnings.append(f"[agent] Unknown field: '{field_name}'")
+
+    # Additional validation for specific fields
+    if 'name' in fm:
+        name = str(fm['name']).strip()
+        if not name:
+            errors.append("[agent] 'name' must be non-empty")
+        elif not re.match(r'^[a-z0-9][a-z0-9-]*[a-z0-9]$', name) and len(name) > 1:
+            warnings.append(f"[agent] 'name' should be kebab-case: {name}")
+
+    if 'description' in fm:
+        desc = str(fm['description']).strip()
         if len(desc) < 20:
             errors.append("[agent] 'description' must be at least 20 characters")
         if len(desc) > 200:
             warnings.append("[agent] 'description' should be 200 characters or less")
 
-    # Recommended: capabilities
-    if 'capabilities' not in fm:
-        warnings.append("[agent] Missing recommended field: capabilities")
-    elif not isinstance(fm['capabilities'], list):
-        warnings.append("[agent] 'capabilities' should be an array")
-    else:
-        caps = fm['capabilities']
-        if len(caps) < 2:
-            warnings.append("[agent] 'capabilities' should have at least 2 items")
-        if len(caps) > 10:
-            warnings.append("[agent] 'capabilities' should have 10 or fewer items")
-        for i, cap in enumerate(caps):
-            if not isinstance(cap, str):
-                errors.append(f"[agent] 'capabilities[{i}]' must be a string")
-
-    # Optional: expertise_level
-    if 'expertise_level' in fm:
-        if fm['expertise_level'] not in VALID_EXPERTISE:
-            warnings.append(f"[agent] Unknown expertise_level: {fm['expertise_level']}")
-
-    # Optional: activation_priority
-    if 'activation_priority' in fm:
-        if fm['activation_priority'] not in VALID_PRIORITIES:
-            warnings.append(f"[agent] Unknown activation_priority: {fm['activation_priority']}")
-
-    # Optional: effort (v2.1.78+ — controls model reasoning effort per turn)
-    if 'effort' in fm:
-        if fm['effort'] not in VALID_EFFORT_LEVELS:
-            warnings.append(f"[agent] Unknown effort level: {fm['effort']}. Must be one of: {', '.join(VALID_EFFORT_LEVELS)}")
-
-    # Optional: maxTurns (v2.1.78+ — caps agentic loop iterations)
-    if 'maxTurns' in fm:
-        if not isinstance(fm['maxTurns'], int) or fm['maxTurns'] < 1:
+    if 'maxTurns' in fm and isinstance(fm['maxTurns'], int):
+        if fm['maxTurns'] < 1:
             errors.append("[agent] 'maxTurns' must be a positive integer")
 
-    # Optional: disallowedTools (v2.1.78+ — denylist for agent tool access)
-    if 'disallowedTools' in fm:
-        if not isinstance(fm['disallowedTools'], list):
-            errors.append("[agent] 'disallowedTools' must be an array of strings")
-        else:
-            for i, tool in enumerate(fm['disallowedTools']):
-                if not isinstance(tool, str):
-                    errors.append(f"[agent] 'disallowedTools[{i}]' must be a string")
+    if 'disallowedTools' in fm and isinstance(fm['disallowedTools'], list):
+        for i, tool in enumerate(fm['disallowedTools']):
+            if not isinstance(tool, str):
+                errors.append(f"[agent] 'disallowedTools[{i}]' must be a string")
+
+    if 'skills' in fm and isinstance(fm['skills'], list):
+        for i, skill in enumerate(fm['skills']):
+            if not isinstance(skill, str):
+                errors.append(f"[agent] 'skills[{i}]' must be a string")
 
     return {'errors': errors, 'warnings': warnings, 'type': 'agent'}
 
