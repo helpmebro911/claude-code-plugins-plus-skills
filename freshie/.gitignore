@@ -1,5 +1,4 @@
-# SQLite databases (large, binary — keep locally, don't commit)
-*.sqlite
+# Python cache
 
 # Python cache
 __pycache__/
