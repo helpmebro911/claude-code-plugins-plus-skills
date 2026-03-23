@@ -1,20 +1,14 @@
 # Claude Code Skills & Plugins Hub
 
-[![Version](https://img.shields.io/badge/version-4.19.0-brightgreen)](000-docs/247-OD-CHNG-changelog.md)
+[![Version](https://img.shields.io/badge/version-4.20.0-brightgreen)](000-docs/247-OD-CHNG-changelog.md)
 [![CLI](https://img.shields.io/badge/CLI-ccpi-blueviolet?logo=npm)](https://www.npmjs.com/package/@intentsolutionsio/ccpi)
-[![Agent Skills](https://img.shields.io/badge/Agent%20Skills-1900%2B-orange)](000-docs/247-OD-CHNG-changelog.md)
-[![Plugins](https://img.shields.io/badge/Total%20Plugins-346-blue)](https://github.com/jeremylongshore/claude-code-plugins-plus-skills)
-[![2026 Schema](https://img.shields.io/badge/2026%20Schema-Compliant-success?logo=checkmarx)](tutorials/skills/05-skill-validation.ipynb)
-[![Tool Permissions](https://img.shields.io/badge/Tool%20Permissions-Secured-blueviolet?logo=shield)](tutorials/skills/02-skill-anatomy.ipynb)
 [![Interactive Tutorials](https://img.shields.io/badge/Tutorials-11%20Notebooks-yellow?logo=jupyter)](000-docs/185-MS-INDX-tutorials.md)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/jeremylongshore/claude-code-plugins-plus-skills/blob/main/tutorials/)
 [![GitHub Stars](https://img.shields.io/github/stars/jeremylongshore/claude-code-plugins-plus-skills?style=social)](https://github.com/jeremylongshore/claude-code-plugins-plus-skills)
-[![Powered by Anthropic](https://img.shields.io/badge/Powered%20by-Anthropic%20Claude-5436DA?logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMkM2LjQ4IDIgMiA2LjQ4IDIgMTJzNC40OCAxMCAxMCAxMCAxMC00LjQ4IDEwLTEwUzE3LjUyIDIgMTIgMnoiIGZpbGw9IiNmZmYiLz48L3N2Zz4=)](https://www.anthropic.com/)
-[![Built on Google Cloud](https://img.shields.io/badge/Built%20on-Google%20Cloud-4285F4?logo=googlecloud&logoColor=white)](https://cloud.google.com/)
 [![Buy me a monster](https://img.shields.io/badge/Buy%20me%20a-Monster-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/jeremylongshore)
-[![$5/month Sponsor](https://img.shields.io/badge/%245%2Fmonth-Sponsor-EA4AAA?style=for-the-badge&logo=github-sponsors&logoColor=white)](https://github.com/sponsors/jeremylongshore)
+[![Partner: Nixtla](https://img.shields.io/badge/Partner-Nixtla-blue)](https://nixtla.io)
 
-**The largest open-source marketplace for Claude Code plugins and agent skills.** 346 plugins, 1,900+ skills, 16 community contributors — validated, graded, and ready to install.
+408 plugins, 3,050 skills, 16 community contributors — validated and ready to install.
 
 ```bash
 pnpm add -g @intentsolutionsio/ccpi    # Install the CLI
@@ -28,9 +22,17 @@ Or use Claude's built-in command:
 
 **[Browse the marketplace](https://tonsofskills.com)** | **[Explore plugins](https://tonsofskills.com/explore)** | **[Download bundles](https://tonsofskills.com/cowork)**
 
-> **Killer Skill of the Week** — [executive-assistant-skills](https://tonsofskills.com/plugins/executive-assistant-skills): *"The AI skills that fully replaced a $4k/mo executive assistant"* by Martin Gontovnikas. Research meetings, draft emails, manage Todoist action items — the complete EA workflow. Grade: A.
+> **Killer Skill of the Week** — [token-optimizer](https://github.com/alexgreensh/token-optimizer) by Alex Greenshpun ([@alexgreensh](https://github.com/alexgreensh))
 >
-> Previous picks: [skill-creator](https://tonsofskills.com/plugins/skill-creator), [cursor-pack](https://tonsofskills.com/plugins/cursor-pack), [crypto-portfolio-tracker](https://tonsofskills.com/plugins/crypto-portfolio-tracker). See all at [tonsofskills.com](https://tonsofskills.com).
+> **Ghost tokens eat your context. Find them. Fix them. Prevent rot.**
+>
+> Claude gets measurably dumber as your context fills. Compaction destroys 60-70% of your conversation. Ghost tokens burn through your rate limits on every message. Token Optimizer tracks all of it: live quality scoring on your status line, smart compaction that saves your decisions before they're lost, full analytics dashboard with per-session cost breakdowns, and 6 parallel audit agents that optimize your entire setup. Not a one-time scan. An ongoing intelligence layer for your Claude Code workflow.
+>
+> *"My Claude Code kept leaking tokens. So I built this. Now my limits last longer, context stays fresh, and I have full visibility and control over my usage & setup."* — Alex Greenshpun
+>
+> Grade: A | Week of March 23, 2026 | [Install from GitHub](https://github.com/alexgreensh/token-optimizer)
+>
+> Previous picks: [executive-assistant-skills](https://tonsofskills.com/plugins/executive-assistant-skills), [skill-creator](https://tonsofskills.com/plugins/skill-creator), [cursor-pack](https://tonsofskills.com/plugins/cursor-pack), [crypto-portfolio-tracker](https://tonsofskills.com/plugins/crypto-portfolio-tracker). See all at [tonsofskills.com](https://tonsofskills.com).
 
 ---
 
@@ -38,8 +40,8 @@ Or use Claude's built-in command:
 
 Anthropic shipped several features since plugins launched in October 2025 that change how developers extend Claude Code:
 
-- **Agent Skills (`SKILL.md`)** replaced static plugins as the primary extension point. Skills auto-activate based on conversation context — no slash commands needed. This repo now contains 1,916 validated skills across 22 categories.
-- **`${CLAUDE_SKILL_DIR}`** is the official path variable for referencing files within a skill directory. It replaced the deprecated `{baseDir}` syntax. All 1,916 skills in this repo use the current variable.
+- **Agent Skills (`SKILL.md`)** replaced static plugins as the primary extension point. Skills auto-activate based on conversation context — no slash commands needed. This repo contains 3,050 validated skills across 21 categories.
+- **`${CLAUDE_SKILL_DIR}`** is the official path variable for referencing files within a skill directory. It replaced the deprecated `{baseDir}` syntax. All skills in this repo use the current variable.
 - **Two-tier validation**: Standard tier (default) follows the Anthropic spec with no required fields. Enterprise tier (`--enterprise`) applies the Intent Solutions 100-point grading rubric. CI auto-selects enterprise.
 - **Progressive Disclosure Architecture (PDA)** keeps skill files concise (target: 150 lines) and offloads detailed references to a `references/` subdirectory. Our 100-point grading rubric enforces this.
 - **Tool permissions** (`allowed-tools` frontmatter) give each skill fine-grained access control. Scoped patterns like `Bash(git:*)` limit what system commands a skill can run.
@@ -69,7 +71,7 @@ ccpi update                     # Pull latest versions
 
 > Already using an older install? Run `/plugin marketplace remove claude-code-plugins` and re-add with the command above to switch to the new slug.
 
-**Browse the catalog:** Visit **[claudecodeplugins.io](https://claudecodeplugins.io/)** or explore [`plugins/`](./plugins/)
+**Browse the catalog:** Visit **[tonsofskills.com](https://tonsofskills.com)** or explore [`plugins/`](./plugins/)
 
 ---
 
@@ -120,49 +122,23 @@ Generates idempotent Ansible playbooks following infrastructure-as-code best pra
 
 | Metric | Count |
 |--------|-------|
-| Total skills | 1,916 |
-| Plugins (marketplace) | 346 |
-| Plugin categories | 22 |
+| Total skills | 3,050 |
+| Plugins (marketplace) | 408 |
+| Plugin categories | 21 |
 | Contributors | 16 |
-| Average skill grade | B (89.9/100) |
-| Production ready (A+B) | 88.9% |
 
 ---
 
 ## Plugin Types
 
-### AI Instruction Plugins (98%)
+### AI Instruction Plugins (293 plugins)
 Markdown files that guide Claude's behavior through structured instructions, skills, commands, and agents. No external code — everything runs through Claude's built-in capabilities.
 
-### MCP Server Plugins (2%)
-TypeScript applications that run as separate Node.js processes. Claude communicates with them through the Model Context Protocol. Currently 7 MCP plugins providing 21 tools.
+### MCP Server Plugins (9 plugins)
+TypeScript applications that run as separate Node.js processes. Claude communicates with them through the Model Context Protocol.
 
-### SaaS Skill Packs
-Pre-built skill collections for specific platforms — Deepgram, LangChain, Linear, Gamma, and 20+ others. Each pack includes install/auth, core workflows, debugging, deployment, and advanced pattern skills.
-
----
-
-## Skill Quality: 100-Point Grading
-
-Every skill in this marketplace is automatically graded on a 100-point scale across five dimensions:
-
-| Dimension | Weight | What It Measures |
-|-----------|--------|-----------------|
-| Progressive Disclosure | 30 pts | File length, references/ usage, navigation |
-| Ease of Use | 25 pts | Metadata quality, discoverability, workflow clarity |
-| Utility | 20 pts | Problem solving, flexibility, error handling, examples |
-| Spec Compliance | 15 pts | Frontmatter validity, naming, description quality |
-| Writing Style | 10 pts | Imperative voice, objectivity, conciseness |
-
-Grades: **A** (90-100), **B** (80-89), **C** (70-79), **D** (60-69), **F** (<60)
-
-Run the validator yourself:
-```bash
-python3 scripts/validate-skills-schema.py --skills-only              # Standard tier (default, no required fields)
-python3 scripts/validate-skills-schema.py --enterprise --skills-only  # Enterprise tier (marketplace rubric)
-python3 scripts/validate-skills-schema.py --verbose --skills-only     # Detailed breakdowns
-python3 scripts/validate-skills-schema.py --show-low-grades           # Find D+F skills
-```
+### SaaS Skill Packs (106 plugins across 21 pack collections)
+Pre-built skill collections for specific platforms — Deepgram, LangChain, Linear, Gamma, and others. Each pack includes install/auth, core workflows, debugging, deployment, and advanced pattern skills.
 
 ---
 
@@ -259,9 +235,9 @@ Production agent workflow patterns with empirical verification — guides, diagr
 Community contributors make this marketplace better. Newest first.
 
 - **[@mjaskolski](https://github.com/mjaskolski) (Michal Jaskolski)** — Added 25 externally-synced agent skills from [wondelai/skills](https://github.com/wondelai/skills) covering product strategy, UX design, marketing/CRO, sales/influence, and growth frameworks. ([#303](https://github.com/jeremylongshore/claude-code-plugins-plus-skills/pull/303))
-- **[@clowreed](https://github.com/clowreed) (B12.io)** — Created [b12-claude-plugin](https://claudecodeplugins.io/plugins/b12-claude-plugin), an official B12.io plugin with a website-generator skill that takes users from idea to production-ready website draft in one conversation. ([#307](https://github.com/jeremylongshore/claude-code-plugins-plus-skills/pull/307))
+- **[@clowreed](https://github.com/clowreed) (B12.io)** — Created [b12-claude-plugin](https://tonsofskills.com/plugins/b12-claude-plugin), an official B12.io plugin with a website-generator skill that takes users from idea to production-ready website draft in one conversation. ([#307](https://github.com/jeremylongshore/claude-code-plugins-plus-skills/pull/307))
 - **[@duskfallcrew](https://github.com/duskfallcrew) (Duskfall Crew)** — Reported PHP webshell payloads in penetration-tester plugin README that triggered AV false positives. Drove a complete v2.0.0 rebuild with real Python security scanners. ([#300](https://github.com/jeremylongshore/claude-code-plugins-plus-skills/issues/300))
-- **[@rowanbrooks100](https://github.com/rowanbrooks100) (Rowan Brooks)** — Created [brand-strategy-framework](https://claudecodeplugins.io/plugins/brand-strategy-framework), a 7-part brand strategy methodology used by top agencies with Fortune 500 clients. ([#292](https://github.com/jeremylongshore/claude-code-plugins-plus-skills/pull/292))
+- **[@rowanbrooks100](https://github.com/rowanbrooks100) (Rowan Brooks)** — Created [brand-strategy-framework](https://tonsofskills.com/plugins/brand-strategy-framework), a 7-part brand strategy methodology used by top agencies with Fortune 500 clients. ([#292](https://github.com/jeremylongshore/claude-code-plugins-plus-skills/pull/292))
 - **[@RichardHightower](https://github.com/RichardHightower) (Rick Hightower)** — Creator of [SkillzWave](https://skillzwave.ai/) (44,000+ agentic skills). His quality reviews exposed validation gaps and drove 4,300+ lines of fixes plus new validator checks. Author of the [Claude Code Skills Deep Dive](https://pub.spillwave.com/claude-code-skills-deep-dive-part-1-82b572ad9450) series. ([#293](https://github.com/jeremylongshore/claude-code-plugins-plus-skills/issues/293), [#294](https://github.com/jeremylongshore/claude-code-plugins-plus-skills/issues/294), [#295](https://github.com/jeremylongshore/claude-code-plugins-plus-skills/issues/295))
 - **[@TomLucidor](https://github.com/TomLucidor) (Tom)** — His question about paid API requirements sparked the "Make All Plugins Free" initiative (v4.1.0) and drove 2,400+ lines of constraint documentation across 6 plugins. ([#148](https://github.com/jeremylongshore/claude-code-plugins-plus-skills/discussions/148))
 - **[@alexfazio](https://github.com/alexfazio) (Alex Fazio)** — Production agent workflow patterns and validation techniques that inspired the Learning Lab system (v4.0.0).
@@ -346,23 +322,16 @@ Community contributors make this marketplace better. Newest first.
 
 MIT License — See [LICENSE](000-docs/001-BL-LICN-license.txt) for details.
 
-## Acknowledgments
-
-- **Anthropic** — For Claude Code and the plugin/skills system
-- **Richard Hightower** — Co-founder of [SkillzWave](https://skillzwave.ai/); his quality reviews shaped our grading rubric
-- **Lee-Han Chung** — Definitive [Claude Skills Deep Dive](https://leehanchung.github.io/blogs/2025/10/26/claude-skills-deep-dive/) technical analysis
-- **Community Contributors** — Everyone who builds, reviews, and improves the ecosystem
-
 ---
 
 <div align="center">
 
 **[Star this repo](https://github.com/jeremylongshore/claude-code-plugins-plus-skills)** if you find it useful
 
-**[Get Started](#quick-start)** | **[Browse Plugins](https://claudecodeplugins.io/explore)** | **[Contribute](#contributors)**
+**[Get Started](#quick-start)** | **[Browse Plugins](https://tonsofskills.com/explore)** | **[Contribute](#contributors)**
 
 </div>
 
 ---
 
-**Version**: 4.17.0 | **Last Updated**: March 2026 | **Skills**: 1,900+ | **Plugins**: 347
+**Version**: 4.20.0 | **Last Updated**: March 2026 | **Skills**: 3,050 | **Plugins**: 408

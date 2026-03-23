@@ -3,6 +3,7 @@ import spotlightData from '../data/spotlights.json';
 
 const skill = spotlightData.spotlight;
 const week = spotlightData.week;
+const isExternal = skill.link.startsWith('http');
 ---
 
 <div
@@ -11,6 +12,7 @@ const week = spotlightData.week;
   data-href={skill.link}
   data-slug={skill.pluginSlug}
   data-week={week}
+  data-external={isExternal ? 'true' : 'false'}
 >
   <div class="killer-top">
     <span class="killer-grade">{skill.grade}</span>
@@ -41,16 +43,24 @@ const week = spotlightData.week;
       />
       <span class="killer-author-name">{skill.author}</span>
     </a>
-    <span class="killer-skills">{skill.skillCount} skills</span>
+    {skill.skillCount && (
+      <span class="killer-skills">{skill.skillCount} skills</span>
+    )}
   </div>
 
   <div class="killer-actions">
-    <a href={skill.link} class="killer-cta-primary">View Plugin &rarr;</a>
-    <a
-      href={`/downloads/plugins/${skill.pluginSlug}.zip`}
-      class="killer-cta-secondary"
-      download
-    >Download for Cowork</a>
+    {isExternal ? (
+      <a href={skill.link} class="killer-cta-primary" target="_blank" rel="noopener noreferrer">View on GitHub &rarr;</a>
+    ) : (
+      <a href={skill.link} class="killer-cta-primary">View Plugin &rarr;</a>
+    )}
+    {!isExternal && (
+      <a
+        href={`/downloads/plugins/${skill.pluginSlug}.zip`}
+        class="killer-cta-secondary"
+        download
+      >Download for Cowork</a>
+    )}
   </div>
 </div>
 
@@ -264,7 +274,11 @@ const week = spotlightData.week;
       }
       var href = card.dataset.href;
       if (href) {
-        window.location.href = href;
+        if (card.dataset.external === 'true') {
+          window.open(href, '_blank', 'noopener,noreferrer');
+        } else {
+          window.location.href = href;
+        }
       }
     });
   })();

@@ -807,6 +807,64 @@ const currentPath = Astro.url.pathname;
       }
     </script>
 
+    <!-- Nomination Form Handler -->
+    <script type="module" is:inline>
+      import { getFunctions, httpsCallable } from 'https://www.gstatic.com/firebasejs/11.8.1/firebase-functions.js';
+      import { getApp } from 'https://www.gstatic.com/firebasejs/11.8.1/firebase-app.js';
+
+      function initNominationForms() {
+        var functions;
+        try { functions = getFunctions(getApp()); }
+        catch (e) { return; }
+        var submitNomination = httpsCallable(functions, 'submitNomination');
+        var ghPattern = /^https:\/\/github\.com\/[^\/]+\/[^\/\s]+/;
+
+        document.querySelectorAll('[data-nomination-form]').forEach(function(form) {
+          form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            var input = form.querySelector('input[name="repo"]');
+            var honeypot = form.querySelector('input[name="website"]');
+            var btn = form.querySelector('button');
+            var originalText = btn.textContent;
+
+            if (!ghPattern.test(input.value)) {
+              btn.textContent = 'GitHub URLs only';
+              setTimeout(function() { btn.textContent = originalText; btn.disabled = false; }, 3000);
+              return;
+            }
+
+            btn.textContent = 'Submitting...';
+            btn.disabled = true;
+
+            try {
+              var result = await submitNomination({
+                repoUrl: input.value,
+                source: form.dataset.nominationForm,
+                website: honeypot ? honeypot.value : ''
+              });
+              btn.textContent = result.data.status === 'already_nominated'
+                ? 'Already submitted!' : 'Submitted!';
+              btn.style.opacity = '0.85';
+              input.value = '';
+              if (window.logFirebaseEvent) {
+                window.logFirebaseEvent('killer_skill_nomination', {
+                  source: form.dataset.nominationForm
+                });
+              }
+            } catch (err) {
+              btn.textContent = 'Something went wrong';
+              setTimeout(function() {
+                btn.textContent = originalText; btn.disabled = false; btn.style.opacity = '';
+              }, 3000);
+            }
+          });
+        });
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initNominationForms);
+      } else { initNominationForms(); }
+    </script>
+
     <!-- Theme Toggle Script -->
     <script is:inline>
         document.addEventListener('DOMContentLoaded', function() {

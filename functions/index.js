@@ -64,3 +64,55 @@ exports.subscribeEmail = onCall(
     return { status: "subscribed" };
   }
 );
+
+exports.submitNomination = onCall(
+  { secrets: [slackWebhookUrl] },
+  async (request) => {
+    const { repoUrl, source, website } = request.data;
+
+    // Honeypot
+    if (website) return { status: "submitted" };
+
+    // Validate GitHub URL
+    if (!repoUrl || !/^https:\/\/github\.com\/[^/]+\/[^/\s]+/.test(repoUrl)) {
+      throw new HttpsError("invalid-argument", "Valid GitHub repo URL required");
+    }
+
+    const cleanUrl = repoUrl.replace(/\/+$/, "").toLowerCase();
+    const db = admin.firestore();
+
+    // Dedupe
+    const existing = await db
+      .collection("nominations")
+      .where("repoUrl", "==", cleanUrl)
+      .limit(1)
+      .get();
+    if (!existing.empty) return { status: "already_nominated" };
+
+    // Save to Firestore
+    await db.collection("nominations").add({
+      repoUrl: cleanUrl,
+      source,
+      submittedAt: admin.firestore.FieldValue.serverTimestamp(),
+      status: "pending",
+    });
+
+    // Slack notification
+    try {
+      const webhookUrl = slackWebhookUrl.value();
+      if (webhookUrl) {
+        await fetch(webhookUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            text: `New Killer Skill nomination: *<${cleanUrl}|${cleanUrl.replace("https://github.com/", "")}>* (from ${source} form)`,
+          }),
+        });
+      }
+    } catch (slackErr) {
+      console.error("Slack notification failed:", slackErr);
+    }
+
+    return { status: "submitted" };
+  }
+);

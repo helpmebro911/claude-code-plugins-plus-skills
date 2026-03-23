@@ -383,12 +383,12 @@ function getContributionSummary(plugins: any[]): string {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 1.25rem;
+      padding: 1.5rem;
       text-decoration: none;
       color: inherit;
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
+      gap: 0.75rem;
       transition: border-color 0.2s ease, transform 0.2s ease;
       position: relative;
       overflow: hidden;
@@ -455,6 +455,29 @@ function getContributionSummary(plugins: any[]): string {
       margin: 0;
     }
 
+    .hof-description {
+      font-size: 0.85rem;
+      line-height: 1.55;
+      color: var(--text-2);
+      margin: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .hof-quote {
+      margin: 0;
+      padding: 0.6rem 0.85rem;
+      border-left: 3px solid var(--primary);
+      background: var(--primary-tint);
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      font-size: 0.8rem;
+      line-height: 1.5;
+      color: var(--text-2);
+    }
+
     .hof-author {
       display: flex;
       align-items: center;
@@ -464,10 +487,20 @@ function getContributionSummary(plugins: any[]): string {
     }
 
     .hof-avatar {
-      width: 24px;
-      height: 24px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
-      border: 1px solid var(--border);
+      border: 1.5px solid var(--border);
+    }
+
+    .hof-author-link {
+      color: var(--text-2);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .hof-author-link:hover {
+      color: var(--primary);
     }
 
     .hof-skills {
@@ -524,25 +557,30 @@ function getContributionSummary(plugins: any[]): string {
 
   {hallOfFame.length > 0 && (
     <div class="section-container" style="padding-bottom: 0;">
-      <h2 class="section-heading">Skills Hall of Fame</h2>
-      <p style="text-align: center; color: var(--text-2); margin: -1rem auto 2rem; max-width: 550px; font-size: 0.95rem;">Past Killer Skill of the Week picks — the best community skills we've spotlighted.</p>
+      <h2 class="section-heading">Hall of Fame</h2>
+      <p style="text-align: center; color: var(--text-2); margin: -1rem auto 2rem; max-width: 550px; font-size: 0.95rem;">Past Killer Skill of the Week spotlights — the best work from the community.</p>
       <div class="hof-grid">
-        {hallOfFame.map(item => (
-          <a href={item.link} class="hof-card">
-            <div class="hof-top">
-              <span class="hof-grade">{item.grade}</span>
-              <span class="hof-week">{item.week}</span>
-              <span class="hof-category">{item.category}</span>
-            </div>
-            <h3 class="hof-headline">{item.headline}</h3>
-            <div class="hof-author">
-              <img src={`https://github.com/${item.authorGithub}.png?size=48`} alt={item.author} class="hof-avatar" width="24" height="24" loading="lazy" />
-              <span>{item.author}</span>
-              <span class="hof-skills">{item.skillCount} skills</span>
-            </div>
-            <span class="hof-link">View plugin →</span>
-          </a>
-        ))}
+        {hallOfFame.map(item => {
+          const isExternal = item.link.startsWith('http');
+          return (
+            <a href={item.link} class="hof-card" target={isExternal ? '_blank' : undefined} rel={isExternal ? 'noopener noreferrer' : undefined}>
+              <div class="hof-top">
+                <span class="hof-grade">{item.grade}</span>
+                <span class="hof-week">{item.week}</span>
+                <span class="hof-category">{item.category}</span>
+              </div>
+              <h3 class="hof-headline">{item.headline}</h3>
+              {item.whyKiller && <p class="hof-description">{item.whyKiller}</p>}
+              {item.quote && <blockquote class="hof-quote">{item.quote}</blockquote>}
+              <div class="hof-author">
+                <img src={`https://github.com/${item.authorGithub}.png?size=64`} alt={item.author} class="hof-avatar" width="32" height="32" loading="lazy" />
+                <a href={`https://github.com/${item.authorGithub}`} class="hof-author-link" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">{item.author}</a>
+                {item.skillCount && <span class="hof-skills">{item.skillCount} skills</span>}
+              </div>
+              <span class="hof-link">{isExternal ? 'View on GitHub →' : 'View plugin →'}</span>
+            </a>
+          );
+        })}
       </div>
     </div>
   )}

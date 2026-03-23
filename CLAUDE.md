@@ -16,7 +16,7 @@ Tons of Skills — Claude Code plugins marketplace (414 plugins, 2,788 skills). 
 
 **Package manager policy (CI-enforced by `scripts/check-package-manager.mjs`):**
 - `pnpm` everywhere at root
-- `npm` for `marketplace/` only (it's excluded from pnpm workspace)
+- `npm` for `marketplace/` only (listed in `pnpm-workspace.yaml` for structural reasons, but uses npm for its own dependencies)
 
 ## Essential Commands
 

@@ -134,6 +134,27 @@ const totalHooks = searchIndex.stats.totalHooks || 0;
             opacity: 0;
         }
 
+        .hero-cowork-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 1.25rem;
+            border: 1px solid var(--primary-border);
+            border-radius: 8px;
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            margin-bottom: 1.25rem;
+            transition: background var(--duration-fast), border-color var(--duration-fast);
+            animation: fadeInUp 0.7s var(--ease-out) 0.15s forwards;
+            opacity: 0;
+        }
+        .hero-cowork-btn:hover {
+            background: var(--primary-tint);
+            border-color: var(--primary);
+        }
+
         /* Search */
         .hero-search {
             width: 100%;
@@ -1151,6 +1172,8 @@ const totalHooks = searchIndex.stats.totalHooks || 0;
                 Agent skills for Claude Code. Search {totalSkills} skills across {totalPlugins} plugins.
             </p>
 
+            <a href="/cowork" class="hero-cowork-btn">Using Claude Cowork? Download skill packs here</a>
+
             <!-- Hero Search Bar -->
             <div class="hero-search">
                 <div class="search-container">
@@ -1219,6 +1242,23 @@ const totalHooks = searchIndex.stats.totalHooks || 0;
                     <input type="email" name="email" placeholder="you@example.com" required style="padding: 0.5rem 0.75rem; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); color: var(--text); font-size: 0.85rem; min-width: 200px;" />
                     <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0;" />
                     <button type="submit" style="padding: 0.5rem 1rem; background: var(--primary); color: white; border: none; border-radius: 8px; font-weight: 600; font-size: 0.85rem; cursor: pointer;">Subscribe</button>
+                </form>
+            </div>
+
+            <div style="margin-top: 1rem; padding: 1.25rem 1.5rem; background: var(--surface-2); border: 1px solid var(--border); border-radius: 12px;">
+                <p style="margin: 0 0 0.25rem; color: var(--text); font-weight: 700; font-size: 1.05rem;">Got a killer skill?</p>
+                <p style="margin: 0 0 1rem; color: var(--text-2); font-size: 0.85rem; line-height: 1.5; max-width: 520px;">Drop your repo link. We review every submission, and if your skill makes the cut, you get the full spotlight — homepage feature, Hall of Fame, and a write-up on your repo.</p>
+                <form data-nomination-form="killer-skills" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                    <input type="url" name="repo"
+                        placeholder="https://github.com/you/your-skill"
+                        pattern="https://github\.com/.+/.+"
+                        title="Must be a GitHub repo URL (https://github.com/owner/repo)"
+                        required
+                        style="padding: 0.5rem 0.75rem; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); color: var(--text); font-size: 0.85rem; min-width: 280px; flex: 1;" />
+                    <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"
+                        style="position:absolute;left:-9999px;opacity:0;height:0;width:0;" />
+                    <button type="submit"
+                        style="padding: 0.5rem 1rem; background: var(--primary); color: white; border: none; border-radius: 8px; font-weight: 600; font-size: 0.85rem; cursor: pointer; white-space: nowrap;">Submit</button>
                 </form>
             </div>
         </div>
