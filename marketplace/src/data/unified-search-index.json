@@ -1,13 +1,13 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generated": "2026-03-24T01:07:54.909Z",
+    "generated": "2026-03-27T19:36:25.033Z",
     "generator": "scripts/generate-unified-search.mjs"
   },
   "stats": {
-    "totalPlugins": 415,
-    "totalSkills": 2782,
-    "totalItems": 3197,
+    "totalPlugins": 416,
+    "totalSkills": 2787,
+    "totalItems": 3203,
     "categories": [
       "ai-agency",
       "ai-ml",
@@ -85,6 +85,7 @@
       "Bash(bandit:*)",
       "Bash(box:*)",
       "Bash(brew:*)",
+      "Bash(bun:*)\"",
       "Bash(cat:*)",
       "Bash(chmod:*)",
       "Bash(ci:*)",
@@ -454,6 +455,7 @@
       "browser-testing",
       "browserstack",
       "budget",
+      "bug-triage",
       "build-measure-learn",
       "bulk",
       "business-continuity",
@@ -1560,6 +1562,7 @@
       "workhuman",
       "workload-identity-federation",
       "ws",
+      "x-twitter",
       "xcode",
       "xcuitest",
       "yaml",
@@ -1572,11 +1575,11 @@
       "zero-cost",
       "zod"
     ],
-    "totalAgents": 117,
-    "totalHooks": 13,
-    "pluginsWithAgents": 39,
-    "pluginsWithHooks": 10,
-    "officialPlugins": 371,
+    "totalAgents": 121,
+    "totalHooks": 14,
+    "pluginsWithAgents": 40,
+    "pluginsWithHooks": 11,
+    "officialPlugins": 372,
     "communityPlugins": 44,
     "communityContributors": 17
   },
@@ -15115,6 +15118,34 @@
       "searchText": "severity1 marketplace severity level classification and prompt improvement for marketplace plugins. assigns severity ratings (s1-critical through s4-low) and enhances plugin prompts for clarity, safety, and effectiveness. security severity classification prompt-improvement marketplace security quality triage agent-skills"
     },
     {
+      "type": "plugin",
+      "id": "x-bug-triage-plugin",
+      "slug": "x-bug-triage-plugin",
+      "name": "x-bug-triage-plugin",
+      "displayName": "x bug triage plugin",
+      "description": "Closed-loop bug triage: X complaints → clusters → repo evidence → owner routing → Slack review → filed issues",
+      "category": "devops",
+      "keywords": [
+        "bug-triage",
+        "x-twitter",
+        "slack",
+        "devops",
+        "mcp"
+      ],
+      "author": {
+        "name": "Claude Code Plugins"
+      },
+      "authorType": "official",
+      "version": "0.3.0",
+      "isFeatured": false,
+      "isNew": true,
+      "badges": [
+        "new"
+      ],
+      "skillCount": 5,
+      "searchText": "x bug triage plugin closed-loop bug triage: x complaints → clusters → repo evidence → owner routing → slack review → filed issues devops bug-triage x-twitter slack devops mcp"
+    },
+    {
       "type": "skill",
       "id": "cursor-advanced-composer",
       "slug": "cursor-advanced-composer",
@@ -24649,6 +24680,24 @@
         "category": "saas-packs"
       },
       "searchText": "brightdata-webhooks-events implement bright data webhook signature validation and event handling. use when setting up webhook endpoints, implementing signature verification, or handling bright data event notifications securely. trigger with phrases like \"brightdata webhook\", \"brightdata events\", \"brightdata webhook signature\", \"handle brightdata events\", \"brightdata notifications\". saas-packs read write edit bash(curl:*) claude-code"
+    },
+    {
+      "type": "skill",
+      "id": "bug-clustering",
+      "slug": "bug-clustering",
+      "name": "bug-clustering",
+      "description": "Internal process for the bug-clusterer agent. Defines the step-by-step procedure for parsing, classifying, redacting, scoring, and clustering bug candidates from raw X/Twitter posts. Not user-invocable — loaded by the agent via its `skills: [\"bug-clustering\"]` frontmatter property.",
+      "category": "mcp",
+      "allowedTools": [],
+      "compatibleWith": [
+        "claude-code"
+      ],
+      "version": "0.1.0",
+      "parentPlugin": {
+        "name": "x-bug-triage-plugin",
+        "category": "mcp"
+      },
+      "searchText": "bug-clustering internal process for the bug-clusterer agent. defines the step-by-step procedure for parsing, classifying, redacting, scoring, and clustering bug candidates from raw x/twitter posts. not user-invocable — loaded by the agent via its `skills: [\"bug-clustering\"]` frontmatter property. mcp  claude-code"
     },
     {
       "type": "skill",
@@ -63088,6 +63137,24 @@
     },
     {
       "type": "skill",
+      "id": "owner-routing",
+      "slug": "owner-routing",
+      "name": "owner-routing",
+      "description": "Internal process for the owner-router agent. Defines the step-by-step procedure for determining likely bug owners using strict 6-level routing precedence with staleness detection. Not user-invocable — loaded by the agent via its `skills: [\"owner-routing\"]` frontmatter property.",
+      "category": "mcp",
+      "allowedTools": [],
+      "compatibleWith": [
+        "claude-code"
+      ],
+      "version": "0.1.0",
+      "parentPlugin": {
+        "name": "x-bug-triage-plugin",
+        "category": "mcp"
+      },
+      "searchText": "owner-routing internal process for the owner-router agent. defines the step-by-step procedure for determining likely bug owners using strict 6-level routing precedence with staleness detection. not user-invocable — loaded by the agent via its `skills: [\"owner-routing\"]` frontmatter property. mcp  claude-code"
+    },
+    {
+      "type": "skill",
       "id": "palantir-ci-integration",
       "slug": "palantir-ci-integration",
       "name": "palantir-ci-integration",
@@ -69331,6 +69398,24 @@
         "category": "saas-packs"
       },
       "searchText": "replit-webhooks-events handle replit deployment events, build replit extensions, and set up agents & automations. use when integrating with replit deployment lifecycle, building workspace extensions, or creating automated workflows with replit agent. trigger with phrases like \"replit webhook\", \"replit events\", \"replit extension\", \"replit automation\", \"replit notifications\", \"replit agent automation\". saas-packs read write edit bash(curl:*) claude-code codex openclaw"
+    },
+    {
+      "type": "skill",
+      "id": "repo-scanning",
+      "slug": "repo-scanning",
+      "name": "repo-scanning",
+      "description": "Internal process for the repo-scanner agent. Defines the step-by-step procedure for scanning GitHub repos for evidence that supports or explains bug clusters. Not user-invocable — loaded by the agent via its `skills: [\"repo-scanning\"]` frontmatter property.",
+      "category": "mcp",
+      "allowedTools": [],
+      "compatibleWith": [
+        "claude-code"
+      ],
+      "version": "0.1.0",
+      "parentPlugin": {
+        "name": "x-bug-triage-plugin",
+        "category": "mcp"
+      },
+      "searchText": "repo-scanning internal process for the repo-scanner agent. defines the step-by-step procedure for scanning github repos for evidence that supports or explains bug clusters. not user-invocable — loaded by the agent via its `skills: [\"repo-scanning\"]` frontmatter property. mcp  claude-code"
     },
     {
       "type": "skill",
@@ -78667,6 +78752,24 @@
     },
     {
       "type": "skill",
+      "id": "triage-display",
+      "slug": "triage-display",
+      "name": "triage-display",
+      "description": "Internal process for the triage-summarizer agent. Defines the step-by-step procedure for formatting triage results as terminal markdown and parsing review commands. Not user-invocable — loaded by the agent via its `skills: [\"triage-display\"]` frontmatter property.",
+      "category": "mcp",
+      "allowedTools": [],
+      "compatibleWith": [
+        "claude-code"
+      ],
+      "version": "0.1.0",
+      "parentPlugin": {
+        "name": "x-bug-triage-plugin",
+        "category": "mcp"
+      },
+      "searchText": "triage-display internal process for the triage-summarizer agent. defines the step-by-step procedure for formatting triage results as terminal markdown and parsing review commands. not user-invocable — loaded by the agent via its `skills: [\"triage-display\"]` frontmatter property. mcp  claude-code"
+    },
+    {
+      "type": "skill",
       "id": "tuning-hyperparameters",
       "slug": "tuning-hyperparameters",
       "name": "tuning-hyperparameters",
@@ -84033,6 +84136,31 @@
         "category": "productivity"
       },
       "searchText": "writer professional writing assistant for pm documents. use when the user needs to write, draft, or polish documents like briefs, updates, emails, or presentations. triggers include \"write\", \"draft\", \"document\", \"help me write\", \"create a brief\", \"polish this\", or when producing any written deliverable. productivity read glob grep claude-code"
+    },
+    {
+      "type": "skill",
+      "id": "x-bug-triage",
+      "slug": "x-bug-triage",
+      "name": "x-bug-triage",
+      "description": "Analyzes public X/Twitter complaints to detect, cluster, and triage bugs with repo evidence and owner routing. Use when monitoring product health from social signals. Trigger with \"/x-bug-triage\" or \"triage X bugs for @account\". Make sure to use this skill whenever triaging bugs from X/Twitter mentions.",
+      "category": "mcp",
+      "allowedTools": [
+        "\"Read",
+        "Write",
+        "Edit",
+        "Glob",
+        "Grep",
+        "Bash(bun:*)\""
+      ],
+      "compatibleWith": [
+        "claude-code"
+      ],
+      "version": "0.3.0",
+      "parentPlugin": {
+        "name": "x-bug-triage-plugin",
+        "category": "mcp"
+      },
+      "searchText": "x-bug-triage analyzes public x/twitter complaints to detect, cluster, and triage bugs with repo evidence and owner routing. use when monitoring product health from social signals. trigger with \"/x-bug-triage\" or \"triage x bugs for @account\". make sure to use this skill whenever triaging bugs from x/twitter mentions. mcp \"read write edit glob grep bash(bun:*)\" claude-code"
     },
     {
       "type": "skill",

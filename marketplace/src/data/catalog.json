@@ -1,22 +1,22 @@
 {
   "meta": {
     "version": "1.0.0",
-    "generated": "2026-03-24T01:07:54.522Z",
+    "generated": "2026-03-27T19:36:24.739Z",
     "source": "marketplace.extended.json",
     "generator": "scripts/sync-catalog.mjs"
   },
   "stats": {
-    "totalPlugins": 415,
-    "totalSkills": 2795,
+    "totalPlugins": 416,
+    "totalSkills": 2800,
     "totalCommands": 75,
-    "pluginsWithSkills": 388,
+    "pluginsWithSkills": 389,
     "byCategory": {
       "productivity": 41,
       "security": 29,
       "testing": 25,
       "ai-ml": 76,
       "performance": 25,
-      "devops": 39,
+      "devops": 40,
       "api-development": 25,
       "crypto": 26,
       "skill-enhancers": 8,
@@ -39,12 +39,12 @@
       "saas-packs": 1
     },
     "byStatus": {
-      "active": 396,
+      "active": 397,
       "maintained": 19
     },
     "featured": 7,
-    "new": 394,
-    "generatedAt": "2026-03-24T01:07:54.522Z"
+    "new": 395,
+    "generatedAt": "2026-03-27T19:36:24.739Z"
   },
   "plugins": [
     {
@@ -14121,6 +14121,38 @@
       "author": {
         "name": "severity1",
         "email": "severity1@intentsolutions.io"
+      },
+      "type": "instruction-plugin"
+    },
+    {
+      "slug": "x-bug-triage-plugin",
+      "name": "x-bug-triage-plugin",
+      "displayName": "x bug triage plugin",
+      "description": "Closed-loop bug triage: X complaints → clusters → repo evidence → owner routing → Slack review → filed issues",
+      "version": "0.3.0",
+      "category": "devops",
+      "keywords": [
+        "bug-triage",
+        "x-twitter",
+        "slack",
+        "devops",
+        "mcp"
+      ],
+      "hasSkills": true,
+      "skillCount": 5,
+      "commandCount": 0,
+      "installCommand": "/plugin install x-bug-triage-plugin",
+      "sourcePath": "./plugins/mcp/x-bug-triage",
+      "lastUpdatedEpoch": 1774399883,
+      "lastUpdatedDate": "2026-03-25T00:51:23.106Z",
+      "status": "active",
+      "badges": [
+        "new"
+      ],
+      "isFeatured": false,
+      "isNew": true,
+      "author": {
+        "name": "Claude Code Plugins"
       },
       "type": "instruction-plugin"
     }

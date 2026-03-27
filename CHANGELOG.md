@@ -5,6 +5,36 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.22.0] - 2026-03-27
+
+### Added
+- **Hooks `if` conditional upgrade** - 4 plugins upgraded to use Claude Code v2.1.85 native `if` field for in-process tool filtering, eliminating unnecessary subprocess spawns. (#496)
+  - `jeremy-github-actions-gcp` - Replace non-standard `filePattern` with native `if` glob
+  - `claude-reflect` - Add `if: "Bash(git commit*)"` to PostToolUse
+  - `pm-ai-partner` - Add `if: "Bash(git commit*)|Bash(git push*)"` to PreToolUse
+  - `formatter` - Add `if` matching 15 file extensions for Write|Edit
+- **x-bug-triage plugin** - External plugin sync with auto-dispatch workflow for all external repos. (#493)
+- **OneNote pack rewrite** - All 18 skills rewritten from stubs (61.7) to production quality (91.4/100). (#489)
+- **Work Diary blog** - /blog with 100 posts backfilled from startaitools.com, plus March 24-25 daily posts.
+
+### Changed
+- **Navigation** - Renamed Blog to Work Diary, replaced Pro nav link with Work Diary link.
+
+### Fixed
+- **Hooks schema normalization** - 2 plugins fixed to standard event-keyed format:
+  - `prettier-markdown-hook` - Convert non-standard root-level array to standard schema
+  - `travel-assistant` - Convert content-based matchers to standard `matcher: ".*"` (scripts handle detection)
+- **x-bug-triage catalog** - Convert author field from string to object format.
+- **/pro page** - Deactivated with 301 redirect to homepage.
+
+### Metrics
+- Commits since v4.21.0: 16 (7 features, 5 fixes, 2 chore)
+- Hook plugins upgraded: 6 (4 with `if` conditionals, 2 schema normalizations)
+- OneNote skills rewritten: 18
+- Contributors: Jeremy Longshore, intentsolutions.io
+
+---
+
 ## [4.21.0] - 2026-03-23
 
 ### Added
