@@ -25,7 +25,7 @@ Or use Claude's built-in command:
 >
 > **Your dashboards don't talk. This skill does.**
 >
-> A push-based analytics intelligence team — 9 specialist agents that fetch your data, detect anomalies, analyze funnels, verify claims, and deliver narrative reports. Not a dashboard you check. An analytics team that finds you. Three tiers: `/analytics` for a 30-second pulse, `/analytics medium` for a daily brief with traffic + content + anomaly detection, `/analytics full` for a deep dive across all sites with adversarial verification. Backed by self-hosted Umami via MCP, with GA4 fallback. Universal config — swap one file and it works for any site portfolio.
+> A push-based analytics intelligence team — 9 specialist agents that fetch your data, detect anomalies, analyze funnels, verify claims, and deliver narrative reports. Powered by self-hosted [Umami](https://umami.is/) via MCP (Model Context Protocol) — agents call the Umami API in real time to pull visitor counts, pageviews, referrers, events, and session data across your entire site portfolio. GA4 as fallback. Not a dashboard you check. An analytics team that finds you. Three tiers: `/analytics` for a 30-second pulse, `/analytics medium` for a daily brief with traffic + content + anomaly detection, `/analytics full` for a deep dive across all sites with adversarial verification. One config file — swap your sites and it works for any portfolio.
 >
 > *"I stopped checking dashboards. Now my analytics team wakes me up when something matters."* — Jeremy Longshore
 >
