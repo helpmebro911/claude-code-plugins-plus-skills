@@ -5,6 +5,34 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.27.0] - 2026-04-21
+
+### Added
+- **LangChain Python Skill Pack v1.0** - Complete 33-skill pack for LangChain/LangGraph Python development:
+  - Core skills (8): model-inference, embeddings-search, sdk-patterns, reference-architecture, multi-env-setup, debug-bundle, deep-agents, langgraph-basics
+  - LangGraph advanced (10): agents, checkpointing, human-in-loop, streaming, subgraphs, middleware-patterns, content-blocks, otel-observability
+  - Production patterns (8): performance-tuning, cost-tuning, rate-limits, security-basics, enterprise-rbac
+  - DevOps (7): ci-integration, deploy-integration, observability, incident-runbook, local-dev-loop, webhooks-events, upgrade-migration
+  - Support skills: common-errors, core-workflow, data-handling, prompt-engineering, eval-harness
+  - Average enterprise score: 92.4/100 (A-grade)
+  - Reference architecture with pain-catalog documenting 25+ real-world failure modes
+
+### Fixed
+- **Gemini PR Review workflow** - Added `workflow_dispatch` trigger for manual review runs on any PR (#546+)
+- **npm Publish** - Fixed repository.url for npm provenance compliance (#545)
+- **npm Publish** - Fixed SIGPIPE abort in mass-publish enumerate step (#544)
+
+### Changed
+- **VERSION file sync** - Corrected VERSION file to match package.json (4.25.0 → 4.26.0)
+
+### Metrics
+- Commits since v4.26.0: 4 (1 feature, 3 fixes)
+- New skills added: 33 (langchain-py-pack)
+- Total skills: 2,882 (+33)
+- Enterprise score maintained: 92.4/100 average for new pack
+
+---
+
 ## [4.26.0] - 2026-04-20
 
 ### Added
