@@ -62,31 +62,31 @@ ccpi update                     # Pull latest versions
 
 ### 📦 Live npm Downloads
 
-Across **322 published packages** in the 
+Across **315 published packages** in the 
 [claude-code-plugins](https://www.npmjs.com/~jeremylongshore) namespace. Updated daily by GitHub Actions.
 
 | Window | Downloads |
 |--------|----------:|
-| Last 24 hours | 183 |
-| Last 7 days | 1,345 |
-| Last 30 days | 41,315 |
+| Last 24 hours | 417 |
+| Last 7 days | 1,339 |
+| Last 30 days | 40,474 |
 
 **Top 10 by last 30 days:**
 
 | # | Package | Last 30d |
 |---|---------|---------:|
-| 1 | [`@intentsolutionsio/guidewire-pack`](https://www.npmjs.com/package/@intentsolutionsio/guidewire-pack) | 334 |
-| 2 | [`@intentsolutionsio/market-price-tracker`](https://www.npmjs.com/package/@intentsolutionsio/market-price-tracker) | 224 |
-| 3 | [`@intentsolutionsio/openbb-terminal`](https://www.npmjs.com/package/@intentsolutionsio/openbb-terminal) | 182 |
-| 4 | [`@intentsolutionsio/options-flow-analyzer`](https://www.npmjs.com/package/@intentsolutionsio/options-flow-analyzer) | 181 |
-| 5 | [`@intentsolutionsio/nft-rarity-analyzer`](https://www.npmjs.com/package/@intentsolutionsio/nft-rarity-analyzer) | 175 |
-| 6 | [`@intentsolutionsio/arbitrage-opportunity-finder`](https://www.npmjs.com/package/@intentsolutionsio/arbitrage-opportunity-finder) | 169 |
-| 7 | [`@intentsolutionsio/openevidence-pack`](https://www.npmjs.com/package/@intentsolutionsio/openevidence-pack) | 168 |
-| 8 | [`@intentsolutionsio/database-health-monitor`](https://www.npmjs.com/package/@intentsolutionsio/database-health-monitor) | 162 |
-| 9 | [`@intentsolutionsio/wallet-portfolio-tracker`](https://www.npmjs.com/package/@intentsolutionsio/wallet-portfolio-tracker) | 160 |
-| 10 | [`@intentsolutionsio/defi-yield-optimizer`](https://www.npmjs.com/package/@intentsolutionsio/defi-yield-optimizer) | 157 |
+| 1 | [`@intentsolutionsio/guidewire-pack`](https://www.npmjs.com/package/@intentsolutionsio/guidewire-pack) | 337 |
+| 2 | [`@intentsolutionsio/ccpi`](https://www.npmjs.com/package/@intentsolutionsio/ccpi) | 333 |
+| 3 | [`@intentsolutionsio/validate-plugin`](https://www.npmjs.com/package/@intentsolutionsio/validate-plugin) | 257 |
+| 4 | [`@intentsolutionsio/openbb-terminal`](https://www.npmjs.com/package/@intentsolutionsio/openbb-terminal) | 185 |
+| 5 | [`@intentsolutionsio/crypto-portfolio-tracker`](https://www.npmjs.com/package/@intentsolutionsio/crypto-portfolio-tracker) | 183 |
+| 6 | [`@intentsolutionsio/options-flow-analyzer`](https://www.npmjs.com/package/@intentsolutionsio/options-flow-analyzer) | 182 |
+| 7 | [`@intentsolutionsio/nft-rarity-analyzer`](https://www.npmjs.com/package/@intentsolutionsio/nft-rarity-analyzer) | 175 |
+| 8 | [`@intentsolutionsio/arbitrage-opportunity-finder`](https://www.npmjs.com/package/@intentsolutionsio/arbitrage-opportunity-finder) | 171 |
+| 9 | [`@intentsolutionsio/crypto-tax-calculator`](https://www.npmjs.com/package/@intentsolutionsio/crypto-tax-calculator) | 168 |
+| 10 | [`@intentsolutionsio/travel-assistant`](https://www.npmjs.com/package/@intentsolutionsio/travel-assistant) | 168 |
 
-<sub>Last refreshed 2026-05-09T04:20:36.983Z.</sub>
+<sub>Last refreshed 2026-05-10T04:41:38.571Z.</sub>
 
 <!-- NPM-STATS:END -->
 
