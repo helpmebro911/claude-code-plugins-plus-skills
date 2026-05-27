@@ -62,31 +62,31 @@ ccpi update                     # Pull latest versions
 
 ### 📦 Live npm Downloads
 
-Across **316 published packages** in the 
+Across **310 published packages** in the 
 [claude-code-plugins](https://www.npmjs.com/~jeremylongshore) namespace. Updated daily by GitHub Actions.
 
 | Window | Downloads |
 |--------|----------:|
-| Last 24 hours | 451 |
-| Last 7 days | 1,548 |
-| Last 30 days | 9,454 |
+| Last 24 hours | 389 |
+| Last 7 days | 1,585 |
+| Last 30 days | 8,742 |
 
 **Top 10 by last 30 days:**
 
 | # | Package | Last 30d |
 |---|---------|---------:|
-| 1 | [`@intentsolutionsio/ccpi`](https://www.npmjs.com/package/@intentsolutionsio/ccpi) | 539 |
-| 2 | [`@intentsolutionsio/guidewire-pack`](https://www.npmjs.com/package/@intentsolutionsio/guidewire-pack) | 259 |
-| 3 | [`@intentsolutionsio/hubspot-pack`](https://www.npmjs.com/package/@intentsolutionsio/hubspot-pack) | 203 |
-| 4 | [`@intentsolutionsio/validate-plugin`](https://www.npmjs.com/package/@intentsolutionsio/validate-plugin) | 170 |
-| 5 | [`@intentsolutionsio/podium-pack`](https://www.npmjs.com/package/@intentsolutionsio/podium-pack) | 144 |
-| 6 | [`@intentsolutionsio/market-price-tracker`](https://www.npmjs.com/package/@intentsolutionsio/market-price-tracker) | 143 |
-| 7 | [`@intentsolutionsio/openbb-terminal`](https://www.npmjs.com/package/@intentsolutionsio/openbb-terminal) | 117 |
-| 8 | [`@intentsolutionsio/excel-analyst-pro`](https://www.npmjs.com/package/@intentsolutionsio/excel-analyst-pro) | 115 |
-| 9 | [`@intentsolutionsio/openrouter-pack`](https://www.npmjs.com/package/@intentsolutionsio/openrouter-pack) | 92 |
+| 1 | [`@intentsolutionsio/guidewire-pack`](https://www.npmjs.com/package/@intentsolutionsio/guidewire-pack) | 261 |
+| 2 | [`@intentsolutionsio/hubspot-pack`](https://www.npmjs.com/package/@intentsolutionsio/hubspot-pack) | 204 |
+| 3 | [`@intentsolutionsio/market-price-tracker`](https://www.npmjs.com/package/@intentsolutionsio/market-price-tracker) | 144 |
+| 4 | [`@intentsolutionsio/excel-analyst-pro`](https://www.npmjs.com/package/@intentsolutionsio/excel-analyst-pro) | 117 |
+| 5 | [`@intentsolutionsio/openbb-terminal`](https://www.npmjs.com/package/@intentsolutionsio/openbb-terminal) | 116 |
+| 6 | [`@intentsolutionsio/openrouter-pack`](https://www.npmjs.com/package/@intentsolutionsio/openrouter-pack) | 99 |
+| 7 | [`@intentsolutionsio/klingai-pack`](https://www.npmjs.com/package/@intentsolutionsio/klingai-pack) | 84 |
+| 8 | [`@intentsolutionsio/market-movers-scanner`](https://www.npmjs.com/package/@intentsolutionsio/market-movers-scanner) | 82 |
+| 9 | [`@intentsolutionsio/crypto-portfolio-tracker`](https://www.npmjs.com/package/@intentsolutionsio/crypto-portfolio-tracker) | 81 |
 | 10 | [`@intentsolutionsio/travel-assistant`](https://www.npmjs.com/package/@intentsolutionsio/travel-assistant) | 81 |
 
-<sub>Last refreshed 2026-05-26T04:59:35.545Z.</sub>
+<sub>Last refreshed 2026-05-27T05:14:04.061Z.</sub>
 
 <!-- NPM-STATS:END -->
 
