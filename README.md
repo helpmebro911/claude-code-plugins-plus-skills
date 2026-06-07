@@ -62,14 +62,14 @@ ccpi update                     # Pull latest versions
 
 ### 📦 Live npm Downloads
 
-Across **311 published packages** in the 
+Across **319 published packages** in the 
 [claude-code-plugins](https://www.npmjs.com/~jeremylongshore) namespace. Updated daily by GitHub Actions.
 
 | Window | Downloads |
 |--------|----------:|
-| Last 24 hours | 571 |
-| Last 7 days | 2,472 |
-| Last 30 days | 9,295 |
+| Last 24 hours | 580 |
+| Last 7 days | 2,589 |
+| Last 30 days | 9,721 |
 
 **Top 10 by last 30 days:**
 
@@ -82,11 +82,11 @@ Across **311 published packages** in the
 | 5 | [`@intentsolutionsio/validate-plugin`](https://www.npmjs.com/package/@intentsolutionsio/validate-plugin) | 173 |
 | 6 | [`@intentsolutionsio/podium-pack`](https://www.npmjs.com/package/@intentsolutionsio/podium-pack) | 156 |
 | 7 | [`@intentsolutionsio/openrouter-pack`](https://www.npmjs.com/package/@intentsolutionsio/openrouter-pack) | 138 |
-| 8 | [`@intentsolutionsio/ideogram-pack`](https://www.npmjs.com/package/@intentsolutionsio/ideogram-pack) | 85 |
-| 9 | [`@intentsolutionsio/mattyp-changelog`](https://www.npmjs.com/package/@intentsolutionsio/mattyp-changelog) | 80 |
-| 10 | [`@intentsolutionsio/excel-analyst-pro`](https://www.npmjs.com/package/@intentsolutionsio/excel-analyst-pro) | 71 |
+| 8 | [`@intentsolutionsio/cursor-pack`](https://www.npmjs.com/package/@intentsolutionsio/cursor-pack) | 99 |
+| 9 | [`@intentsolutionsio/openevidence-pack`](https://www.npmjs.com/package/@intentsolutionsio/openevidence-pack) | 90 |
+| 10 | [`@intentsolutionsio/klingai-pack`](https://www.npmjs.com/package/@intentsolutionsio/klingai-pack) | 79 |
 
-<sub>Last refreshed 2026-06-06T04:45:24.665Z.</sub>
+<sub>Last refreshed 2026-06-07T05:21:24.422Z.</sub>
 
 <!-- NPM-STATS:END -->
 
