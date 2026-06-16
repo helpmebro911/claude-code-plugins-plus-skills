@@ -62,14 +62,14 @@ ccpi update                     # Pull latest versions
 
 ### 📦 Live npm Downloads
 
-Across **317 published packages** in the 
+Across **321 published packages** in the 
 [claude-code-plugins](https://www.npmjs.com/~jeremylongshore) namespace. Updated daily by GitHub Actions.
 
 | Window | Downloads |
 |--------|----------:|
-| Last 24 hours | 370 |
-| Last 7 days | 48,188 |
-| Last 30 days | 56,053 |
+| Last 24 hours | 402 |
+| Last 7 days | 49,409 |
+| Last 30 days | 57,677 |
 
 **Top 10 by last 30 days:**
 
@@ -82,11 +82,11 @@ Across **317 published packages** in the
 | 5 | [`@intentsolutionsio/openrouter-pack`](https://www.npmjs.com/package/@intentsolutionsio/openrouter-pack) | 337 |
 | 6 | [`@intentsolutionsio/cursor-pack`](https://www.npmjs.com/package/@intentsolutionsio/cursor-pack) | 329 |
 | 7 | [`@intentsolutionsio/langfuse-pack`](https://www.npmjs.com/package/@intentsolutionsio/langfuse-pack) | 257 |
-| 8 | [`@intentsolutionsio/flyio-pack`](https://www.npmjs.com/package/@intentsolutionsio/flyio-pack) | 244 |
-| 9 | [`@intentsolutionsio/security-pro-pack`](https://www.npmjs.com/package/@intentsolutionsio/security-pro-pack) | 237 |
-| 10 | [`@intentsolutionsio/firecrawl-pack`](https://www.npmjs.com/package/@intentsolutionsio/firecrawl-pack) | 235 |
+| 8 | [`@intentsolutionsio/geepers-agents`](https://www.npmjs.com/package/@intentsolutionsio/geepers-agents) | 254 |
+| 9 | [`@intentsolutionsio/kubernetes-deployment-creator`](https://www.npmjs.com/package/@intentsolutionsio/kubernetes-deployment-creator) | 249 |
+| 10 | [`@intentsolutionsio/cohere-pack`](https://www.npmjs.com/package/@intentsolutionsio/cohere-pack) | 244 |
 
-<sub>Last refreshed 2026-06-15T05:52:41.224Z.</sub>
+<sub>Last refreshed 2026-06-16T05:58:27.307Z.</sub>
 
 <!-- NPM-STATS:END -->
 
