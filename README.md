@@ -62,31 +62,31 @@ ccpi update                     # Pull latest versions
 
 ### 📦 Live npm Downloads
 
-Across **323 published packages** in the 
+Across **353 published packages** in the 
 [claude-code-plugins](https://www.npmjs.com/~jeremylongshore) namespace. Updated daily by GitHub Actions.
 
 | Window | Downloads |
 |--------|----------:|
-| Last 24 hours | 1,435 |
-| Last 7 days | 8,423 |
-| Last 30 days | 59,446 |
+| Last 24 hours | 1,039 |
+| Last 7 days | 8,392 |
+| Last 30 days | 65,416 |
 
 **Top 10 by last 30 days:**
 
 | # | Package | Last 30d |
 |---|---------|---------:|
-| 1 | [`@intentsolutionsio/openrouter-pack`](https://www.npmjs.com/package/@intentsolutionsio/openrouter-pack) | 796 |
-| 2 | [`@intentsolutionsio/wallet-security-auditor`](https://www.npmjs.com/package/@intentsolutionsio/wallet-security-auditor) | 708 |
-| 3 | [`@intentsolutionsio/ccpi`](https://www.npmjs.com/package/@intentsolutionsio/ccpi) | 504 |
-| 4 | [`@intentsolutionsio/jeremy-plugin-tool`](https://www.npmjs.com/package/@intentsolutionsio/jeremy-plugin-tool) | 401 |
-| 5 | [`@intentsolutionsio/cursor-pack`](https://www.npmjs.com/package/@intentsolutionsio/cursor-pack) | 346 |
-| 6 | [`@intentsolutionsio/databricks-pack`](https://www.npmjs.com/package/@intentsolutionsio/databricks-pack) | 342 |
-| 7 | [`@intentsolutionsio/cohere-pack`](https://www.npmjs.com/package/@intentsolutionsio/cohere-pack) | 270 |
-| 8 | [`@intentsolutionsio/langfuse-pack`](https://www.npmjs.com/package/@intentsolutionsio/langfuse-pack) | 270 |
-| 9 | [`@intentsolutionsio/geepers-agents`](https://www.npmjs.com/package/@intentsolutionsio/geepers-agents) | 268 |
-| 10 | [`@intentsolutionsio/kubernetes-deployment-creator`](https://www.npmjs.com/package/@intentsolutionsio/kubernetes-deployment-creator) | 263 |
+| 1 | [`@intentsolutionsio/openrouter-pack`](https://www.npmjs.com/package/@intentsolutionsio/openrouter-pack) | 1,114 |
+| 2 | [`@intentsolutionsio/wallet-security-auditor`](https://www.npmjs.com/package/@intentsolutionsio/wallet-security-auditor) | 715 |
+| 3 | [`@intentsolutionsio/ccpi`](https://www.npmjs.com/package/@intentsolutionsio/ccpi) | 510 |
+| 4 | [`@intentsolutionsio/databricks-pack`](https://www.npmjs.com/package/@intentsolutionsio/databricks-pack) | 343 |
+| 5 | [`@intentsolutionsio/claude-pack`](https://www.npmjs.com/package/@intentsolutionsio/claude-pack) | 278 |
+| 6 | [`@intentsolutionsio/geepers-agents`](https://www.npmjs.com/package/@intentsolutionsio/geepers-agents) | 272 |
+| 7 | [`@intentsolutionsio/kubernetes-deployment-creator`](https://www.npmjs.com/package/@intentsolutionsio/kubernetes-deployment-creator) | 266 |
+| 8 | [`@intentsolutionsio/general-legal-assistant`](https://www.npmjs.com/package/@intentsolutionsio/general-legal-assistant) | 260 |
+| 9 | [`@intentsolutionsio/flyio-pack`](https://www.npmjs.com/package/@intentsolutionsio/flyio-pack) | 257 |
+| 10 | [`@intentsolutionsio/secret-scanner`](https://www.npmjs.com/package/@intentsolutionsio/secret-scanner) | 256 |
 
-<sub>Last refreshed 2026-06-18T05:27:43.690Z.</sub>
+<sub>Last refreshed 2026-06-19T05:44:34.859Z.</sub>
 
 <!-- NPM-STATS:END -->
 
