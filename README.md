@@ -67,9 +67,9 @@ Across **338 published packages** in the
 
 | Window | Downloads |
 |--------|----------:|
-| Last 24 hours | 1,848 |
-| Last 7 days | 7,444 |
-| Last 30 days | 82,125 |
+| Last 24 hours | 1,870 |
+| Last 7 days | 7,398 |
+| Last 30 days | 82,148 |
 
 **Top 10 by last 30 days:**
 
@@ -84,9 +84,9 @@ Across **338 published packages** in the
 | 7 | [`@intentsolutionsio/wondelai-storybrand-messaging`](https://www.npmjs.com/package/@intentsolutionsio/wondelai-storybrand-messaging) | 505 |
 | 8 | [`@intentsolutionsio/wondelai-blue-ocean-strategy`](https://www.npmjs.com/package/@intentsolutionsio/wondelai-blue-ocean-strategy) | 504 |
 | 9 | [`@intentsolutionsio/youtube-strategy`](https://www.npmjs.com/package/@intentsolutionsio/youtube-strategy) | 502 |
-| 10 | [`@intentsolutionsio/box-cloud-filesystem`](https://www.npmjs.com/package/@intentsolutionsio/box-cloud-filesystem) | 495 |
+| 10 | [`@intentsolutionsio/wondelai-influence-psychology`](https://www.npmjs.com/package/@intentsolutionsio/wondelai-influence-psychology) | 497 |
 
-<sub>Last refreshed 2026-07-04T04:27:42.572Z.</sub>
+<sub>Last refreshed 2026-07-05T04:40:58.060Z.</sub>
 
 <!-- NPM-STATS:END -->
 
