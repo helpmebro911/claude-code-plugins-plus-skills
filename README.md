@@ -62,31 +62,31 @@ ccpi update                     # Pull latest versions
 
 ### 📦 Live npm Downloads
 
-Across **311 published packages** in the 
+Across **323 published packages** in the 
 [claude-code-plugins](https://www.npmjs.com/~jeremylongshore) namespace. Updated daily by GitHub Actions.
 
 | Window | Downloads |
 |--------|----------:|
-| Last 24 hours | 761 |
-| Last 7 days | 4,635 |
-| Last 30 days | 35,743 |
+| Last 24 hours | 534 |
+| Last 7 days | 5,319 |
+| Last 30 days | 38,822 |
 
 **Top 10 by last 30 days:**
 
 | # | Package | Last 30d |
 |---|---------|---------:|
-| 1 | [`@intentsolutionsio/openrouter-pack`](https://www.npmjs.com/package/@intentsolutionsio/openrouter-pack) | 1,078 |
-| 2 | [`@intentsolutionsio/wallet-security-auditor`](https://www.npmjs.com/package/@intentsolutionsio/wallet-security-auditor) | 930 |
-| 3 | [`@intentsolutionsio/wondelai-influence-psychology`](https://www.npmjs.com/package/@intentsolutionsio/wondelai-influence-psychology) | 692 |
-| 4 | [`@intentsolutionsio/000-jeremy-content-consistency-validator`](https://www.npmjs.com/package/@intentsolutionsio/000-jeremy-content-consistency-validator) | 429 |
-| 5 | [`@intentsolutionsio/nosql-data-modeler`](https://www.npmjs.com/package/@intentsolutionsio/nosql-data-modeler) | 395 |
-| 6 | [`@intentsolutionsio/gastown`](https://www.npmjs.com/package/@intentsolutionsio/gastown) | 382 |
-| 7 | [`@intentsolutionsio/wondelai-storybrand-messaging`](https://www.npmjs.com/package/@intentsolutionsio/wondelai-storybrand-messaging) | 363 |
-| 8 | [`@intentsolutionsio/wondelai-scorecard-marketing`](https://www.npmjs.com/package/@intentsolutionsio/wondelai-scorecard-marketing) | 358 |
-| 9 | [`@intentsolutionsio/youtube-strategy`](https://www.npmjs.com/package/@intentsolutionsio/youtube-strategy) | 358 |
-| 10 | [`@intentsolutionsio/box-cloud-filesystem`](https://www.npmjs.com/package/@intentsolutionsio/box-cloud-filesystem) | 349 |
+| 1 | [`@intentsolutionsio/openrouter-pack`](https://www.npmjs.com/package/@intentsolutionsio/openrouter-pack) | 1,082 |
+| 2 | [`@intentsolutionsio/databricks-pack`](https://www.npmjs.com/package/@intentsolutionsio/databricks-pack) | 992 |
+| 3 | [`@intentsolutionsio/wondelai-influence-psychology`](https://www.npmjs.com/package/@intentsolutionsio/wondelai-influence-psychology) | 683 |
+| 4 | [`@intentsolutionsio/wondelai-drive-motivation`](https://www.npmjs.com/package/@intentsolutionsio/wondelai-drive-motivation) | 576 |
+| 5 | [`@intentsolutionsio/000-jeremy-content-consistency-validator`](https://www.npmjs.com/package/@intentsolutionsio/000-jeremy-content-consistency-validator) | 441 |
+| 6 | [`@intentsolutionsio/sugar`](https://www.npmjs.com/package/@intentsolutionsio/sugar) | 430 |
+| 7 | [`@intentsolutionsio/general-legal-assistant`](https://www.npmjs.com/package/@intentsolutionsio/general-legal-assistant) | 402 |
+| 8 | [`@intentsolutionsio/nosql-data-modeler`](https://www.npmjs.com/package/@intentsolutionsio/nosql-data-modeler) | 388 |
+| 9 | [`@intentsolutionsio/gastown`](https://www.npmjs.com/package/@intentsolutionsio/gastown) | 377 |
+| 10 | [`@intentsolutionsio/n8n-workflow-designer`](https://www.npmjs.com/package/@intentsolutionsio/n8n-workflow-designer) | 360 |
 
-<sub>Last refreshed 2026-07-12T04:22:20.490Z.</sub>
+<sub>Last refreshed 2026-07-13T04:23:36.999Z.</sub>
 
 <!-- NPM-STATS:END -->
 
