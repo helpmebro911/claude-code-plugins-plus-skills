@@ -62,31 +62,31 @@ ccpi update                     # Pull latest versions
 
 ### 📦 Live npm Downloads
 
-Across **314 published packages** in the 
+Across **336 published packages** in the 
 [claude-code-plugins](https://www.npmjs.com/~jeremylongshore) namespace. Updated daily by GitHub Actions.
 
 | Window | Downloads |
 |--------|----------:|
-| Last 24 hours | 190 |
-| Last 7 days | 4,519 |
-| Last 30 days | 23,834 |
+| Last 24 hours | 206 |
+| Last 7 days | 3,973 |
+| Last 30 days | 23,607 |
 
 **Top 10 by last 30 days:**
 
 | # | Package | Last 30d |
 |---|---------|---------:|
 | 1 | [`@intentsolutionsio/databricks-pack`](https://www.npmjs.com/package/@intentsolutionsio/databricks-pack) | 972 |
-| 2 | [`@intentsolutionsio/wallet-security-auditor`](https://www.npmjs.com/package/@intentsolutionsio/wallet-security-auditor) | 674 |
-| 3 | [`@intentsolutionsio/wondelai-influence-psychology`](https://www.npmjs.com/package/@intentsolutionsio/wondelai-influence-psychology) | 468 |
-| 4 | [`@intentsolutionsio/000-jeremy-content-consistency-validator`](https://www.npmjs.com/package/@intentsolutionsio/000-jeremy-content-consistency-validator) | 423 |
-| 5 | [`@intentsolutionsio/skill-creator`](https://www.npmjs.com/package/@intentsolutionsio/skill-creator) | 316 |
-| 6 | [`@intentsolutionsio/openrouter-pack`](https://www.npmjs.com/package/@intentsolutionsio/openrouter-pack) | 253 |
-| 7 | [`@intentsolutionsio/clickhouse-pack`](https://www.npmjs.com/package/@intentsolutionsio/clickhouse-pack) | 249 |
-| 8 | [`@intentsolutionsio/freshie-inventory-manager`](https://www.npmjs.com/package/@intentsolutionsio/freshie-inventory-manager) | 239 |
-| 9 | [`@intentsolutionsio/notion-pack`](https://www.npmjs.com/package/@intentsolutionsio/notion-pack) | 231 |
-| 10 | [`@intentsolutionsio/sentry-pack`](https://www.npmjs.com/package/@intentsolutionsio/sentry-pack) | 222 |
+| 2 | [`@intentsolutionsio/wallet-security-auditor`](https://www.npmjs.com/package/@intentsolutionsio/wallet-security-auditor) | 646 |
+| 3 | [`@intentsolutionsio/wondelai-influence-psychology`](https://www.npmjs.com/package/@intentsolutionsio/wondelai-influence-psychology) | 445 |
+| 4 | [`@intentsolutionsio/000-jeremy-content-consistency-validator`](https://www.npmjs.com/package/@intentsolutionsio/000-jeremy-content-consistency-validator) | 424 |
+| 5 | [`@intentsolutionsio/validate-plugin`](https://www.npmjs.com/package/@intentsolutionsio/validate-plugin) | 280 |
+| 6 | [`@intentsolutionsio/openrouter-pack`](https://www.npmjs.com/package/@intentsolutionsio/openrouter-pack) | 262 |
+| 7 | [`@intentsolutionsio/clickhouse-pack`](https://www.npmjs.com/package/@intentsolutionsio/clickhouse-pack) | 258 |
+| 8 | [`@intentsolutionsio/freshie-inventory-manager`](https://www.npmjs.com/package/@intentsolutionsio/freshie-inventory-manager) | 242 |
+| 9 | [`@intentsolutionsio/notion-pack`](https://www.npmjs.com/package/@intentsolutionsio/notion-pack) | 237 |
+| 10 | [`@intentsolutionsio/supabase-pack`](https://www.npmjs.com/package/@intentsolutionsio/supabase-pack) | 218 |
 
-<sub>Last refreshed 2026-07-22T04:11:58.882Z.</sub>
+<sub>Last refreshed 2026-07-23T04:10:35.211Z.</sub>
 
 <!-- NPM-STATS:END -->
 
