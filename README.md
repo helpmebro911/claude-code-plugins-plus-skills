@@ -62,14 +62,14 @@ ccpi update                     # Pull latest versions
 
 ### 📦 Live npm Downloads
 
-Across **316 published packages** in the 
+Across **313 published packages** in the 
 [claude-code-plugins](https://www.npmjs.com/~jeremylongshore) namespace. Updated daily by GitHub Actions.
 
 | Window | Downloads |
 |--------|----------:|
-| Last 24 hours | 296 |
-| Last 7 days | 1,721 |
-| Last 30 days | 11,393 |
+| Last 24 hours | 276 |
+| Last 7 days | 1,581 |
+| Last 30 days | 10,896 |
 
 **Top 10 by last 30 days:**
 
@@ -86,7 +86,7 @@ Across **316 published packages** in the
 | 9 | [`@intentsolutionsio/freshie-inventory-manager`](https://www.npmjs.com/package/@intentsolutionsio/freshie-inventory-manager) | 221 |
 | 10 | [`@intentsolutionsio/supabase-pack`](https://www.npmjs.com/package/@intentsolutionsio/supabase-pack) | 200 |
 
-<sub>Last refreshed 2026-08-14T03:12:09.711Z.</sub>
+<sub>Last refreshed 2026-08-15T02:14:15.822Z.</sub>
 
 <!-- NPM-STATS:END -->
 
