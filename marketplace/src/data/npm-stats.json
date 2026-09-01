@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-31T06:00:41.064Z",
-  "publishedCount": 314,
+  "generatedAt": "2026-09-01T05:30:41.744Z",
+  "publishedCount": 317,
   "candidateCount": 430,
-  "totalDay": 500,
-  "totalWeek": 2572,
-  "totalMonth": 9091,
+  "totalDay": 513,
+  "totalWeek": 2590,
+  "totalMonth": 8861,
   "top": [
     {
-      "name": "@intentsolutionsio/openrouter-pack",
-      "lastDay": 7,
-      "lastWeek": 41,
-      "lastMonth": 1026
+      "name": "@intentsolutionsio/groq-pack",
+      "lastDay": 23,
+      "lastWeek": 72,
+      "lastMonth": 734
     },
     {
       "name": "@intentsolutionsio/mistral-pack",
@@ -61,10 +61,16 @@
       "lastMonth": 113
     },
     {
-      "name": "@intentsolutionsio/claude-pack",
-      "lastDay": 5,
-      "lastWeek": 28,
-      "lastMonth": 89
+      "name": "@intentsolutionsio/elevenlabs-pack",
+      "lastDay": 3,
+      "lastWeek": 23,
+      "lastMonth": 99
+    },
+    {
+      "name": "@intentsolutionsio/clickhouse-pack",
+      "lastDay": 3,
+      "lastWeek": 31,
+      "lastMonth": 98
     },
     {
       "name": "@intentsolutionsio/crypto-tax-calculator",
@@ -85,12 +91,6 @@
       "lastMonth": 82
     },
     {
-      "name": "@intentsolutionsio/webflow-pack",
-      "lastDay": 2,
-      "lastWeek": 29,
-      "lastMonth": 78
-    },
-    {
       "name": "@intentsolutionsio/code-cleanup",
       "lastDay": 1,
       "lastWeek": 16,
@@ -109,6 +109,12 @@
       "lastMonth": 76
     },
     {
+      "name": "@intentsolutionsio/jeremy-adk-orchestrator",
+      "lastDay": 1,
+      "lastWeek": 8,
+      "lastMonth": 72
+    },
+    {
       "name": "@intentsolutionsio/perplexity-pack",
       "lastDay": 4,
       "lastWeek": 22,
@@ -121,9 +127,9 @@
       "lastMonth": 60
     },
     {
-      "name": "@intentsolutionsio/vastai-pack",
-      "lastDay": 6,
-      "lastWeek": 17,
+      "name": "@intentsolutionsio/skill-creator",
+      "lastDay": 1,
+      "lastWeek": 8,
       "lastMonth": 60
     },
     {
@@ -151,16 +157,10 @@
       "lastMonth": 55
     },
     {
-      "name": "@intentsolutionsio/salesforce-pack",
+      "name": "@intentsolutionsio/intercom-pack",
       "lastDay": 1,
       "lastWeek": 9,
-      "lastMonth": 53
-    },
-    {
-      "name": "@intentsolutionsio/cursor-pack",
-      "lastDay": 2,
-      "lastWeek": 11,
-      "lastMonth": 51
+      "lastMonth": 55
     },
     {
       "name": "@intentsolutionsio/deep-learning-optimizer",
@@ -181,21 +181,9 @@
       "lastMonth": 49
     },
     {
-      "name": "@intentsolutionsio/gamma-pack",
-      "lastDay": 2,
-      "lastWeek": 11,
-      "lastMonth": 49
-    },
-    {
       "name": "@intentsolutionsio/clerk-pack",
       "lastDay": 1,
       "lastWeek": 6,
-      "lastMonth": 48
-    },
-    {
-      "name": "@intentsolutionsio/freshie-inventory-manager",
-      "lastDay": 3,
-      "lastWeek": 10,
       "lastMonth": 48
     },
     {
@@ -241,10 +229,22 @@
       "lastMonth": 45
     },
     {
+      "name": "@intentsolutionsio/crypto-derivatives-tracker",
+      "lastDay": 3,
+      "lastWeek": 12,
+      "lastMonth": 43
+    },
+    {
       "name": "@intentsolutionsio/klaviyo-pack",
       "lastDay": 2,
       "lastWeek": 8,
       "lastMonth": 43
+    },
+    {
+      "name": "@intentsolutionsio/langfuse-pack",
+      "lastDay": 1,
+      "lastWeek": 7,
+      "lastMonth": 42
     },
     {
       "name": "@intentsolutionsio/maintainx-pack",
@@ -295,10 +295,10 @@
       "lastMonth": 39
     },
     {
-      "name": "@intentsolutionsio/replit-pack",
-      "lastDay": 5,
-      "lastWeek": 17,
-      "lastMonth": 39
+      "name": "@intentsolutionsio/customerio-pack",
+      "lastDay": 3,
+      "lastWeek": 16,
+      "lastMonth": 38
     },
     {
       "name": "@intentsolutionsio/ai-ml-engineering-pack",
@@ -331,9 +331,21 @@
       "lastMonth": 36
     },
     {
-      "name": "@intentsolutionsio/n8n-workflow-designer",
+      "name": "@intentsolutionsio/data-seeder-generator",
       "lastDay": 1,
-      "lastWeek": 6,
+      "lastWeek": 4,
+      "lastMonth": 35
+    },
+    {
+      "name": "@intentsolutionsio/deployment-pipeline-orchestrator",
+      "lastDay": 1,
+      "lastWeek": 15,
+      "lastMonth": 35
+    },
+    {
+      "name": "@intentsolutionsio/overnight-dev",
+      "lastDay": 1,
+      "lastWeek": 4,
       "lastMonth": 35
     },
     {
@@ -349,9 +361,9 @@
       "lastMonth": 35
     },
     {
-      "name": "@intentsolutionsio/whale-alert-monitor",
-      "lastDay": 1,
-      "lastWeek": 6,
+      "name": "@intentsolutionsio/together-pack",
+      "lastDay": 2,
+      "lastWeek": 11,
       "lastMonth": 35
     },
     {
@@ -365,30 +377,6 @@
       "lastDay": 2,
       "lastWeek": 6,
       "lastMonth": 33
-    },
-    {
-      "name": "@intentsolutionsio/linktree-pack",
-      "lastDay": 1,
-      "lastWeek": 23,
-      "lastMonth": 33
-    },
-    {
-      "name": "@intentsolutionsio/make-scenario-builder",
-      "lastDay": 1,
-      "lastWeek": 10,
-      "lastMonth": 33
-    },
-    {
-      "name": "@intentsolutionsio/ai-sdk-agents",
-      "lastDay": 1,
-      "lastWeek": 7,
-      "lastMonth": 31
-    },
-    {
-      "name": "@intentsolutionsio/jeremy-adk-software-engineer",
-      "lastDay": 1,
-      "lastWeek": 14,
-      "lastMonth": 31
     },
     {
       "name": "@intentsolutionsio/smoke-test-runner",
@@ -409,15 +397,9 @@
       "lastMonth": 30
     },
     {
-      "name": "@intentsolutionsio/jeremy-firestore",
+      "name": "@intentsolutionsio/mempool-analyzer",
       "lastDay": 1,
-      "lastWeek": 7,
-      "lastMonth": 30
-    },
-    {
-      "name": "@intentsolutionsio/linear-pack",
-      "lastDay": 2,
-      "lastWeek": 9,
+      "lastWeek": 5,
       "lastMonth": 30
     },
     {
@@ -427,16 +409,16 @@
       "lastMonth": 30
     },
     {
+      "name": "@intentsolutionsio/openevidence-pack",
+      "lastDay": 2,
+      "lastWeek": 9,
+      "lastMonth": 30
+    },
+    {
       "name": "@intentsolutionsio/retellai-pack",
       "lastDay": 2,
       "lastWeek": 10,
       "lastMonth": 30
-    },
-    {
-      "name": "@intentsolutionsio/ansible-playbook-creator",
-      "lastDay": 1,
-      "lastWeek": 13,
-      "lastMonth": 29
     },
     {
       "name": "@intentsolutionsio/granola-pack",
@@ -448,6 +430,12 @@
       "name": "@intentsolutionsio/navigating-github",
       "lastDay": 1,
       "lastWeek": 6,
+      "lastMonth": 29
+    },
+    {
+      "name": "@intentsolutionsio/rest-api-generator",
+      "lastDay": 1,
+      "lastWeek": 16,
       "lastMonth": 29
     },
     {
@@ -469,27 +457,9 @@
       "lastMonth": 28
     },
     {
-      "name": "@intentsolutionsio/lindy-pack",
-      "lastDay": 2,
-      "lastWeek": 8,
-      "lastMonth": 28
-    },
-    {
-      "name": "@intentsolutionsio/anthropic-pack",
-      "lastDay": 1,
-      "lastWeek": 12,
-      "lastMonth": 27
-    },
-    {
       "name": "@intentsolutionsio/box-cloud-filesystem",
       "lastDay": 1,
       "lastWeek": 9,
-      "lastMonth": 27
-    },
-    {
-      "name": "@intentsolutionsio/jeremy-plugin-tool",
-      "lastDay": 1,
-      "lastWeek": 7,
       "lastMonth": 27
     },
     {
@@ -502,12 +472,6 @@
       "name": "@intentsolutionsio/kubernetes-deployment-creator",
       "lastDay": 1,
       "lastWeek": 13,
-      "lastMonth": 25
-    },
-    {
-      "name": "@intentsolutionsio/travel-assistant",
-      "lastDay": 1,
-      "lastWeek": 7,
       "lastMonth": 25
     },
     {
@@ -536,6 +500,12 @@
     },
     {
       "name": "@intentsolutionsio/defi-yield-optimizer",
+      "lastDay": 1,
+      "lastWeek": 6,
+      "lastMonth": 24
+    },
+    {
+      "name": "@intentsolutionsio/disaster-recovery-planner",
       "lastDay": 1,
       "lastWeek": 6,
       "lastMonth": 24
@@ -583,6 +553,12 @@
       "lastMonth": 24
     },
     {
+      "name": "@intentsolutionsio/blockchain-explorer-cli",
+      "lastDay": 1,
+      "lastWeek": 7,
+      "lastMonth": 23
+    },
+    {
       "name": "@intentsolutionsio/brand-strategy-framework",
       "lastDay": 1,
       "lastWeek": 6,
@@ -613,7 +589,31 @@
       "lastMonth": 23
     },
     {
+      "name": "@intentsolutionsio/wondelai-hundred-million-offers",
+      "lastDay": 0,
+      "lastWeek": 4,
+      "lastMonth": 23
+    },
+    {
       "name": "@intentsolutionsio/004-jeremy-google-cloud-agent-sdk",
+      "lastDay": 1,
+      "lastWeek": 7,
+      "lastMonth": 22
+    },
+    {
+      "name": "@intentsolutionsio/fairdb-operations-kit",
+      "lastDay": 1,
+      "lastWeek": 6,
+      "lastMonth": 22
+    },
+    {
+      "name": "@intentsolutionsio/guidewire-pack",
+      "lastDay": 0,
+      "lastWeek": 4,
+      "lastMonth": 22
+    },
+    {
+      "name": "@intentsolutionsio/jeremy-genkit-pro",
       "lastDay": 1,
       "lastWeek": 7,
       "lastMonth": 22
@@ -625,15 +625,21 @@
       "lastMonth": 22
     },
     {
+      "name": "@intentsolutionsio/query-performance-analyzer",
+      "lastDay": 2,
+      "lastWeek": 6,
+      "lastMonth": 22
+    },
+    {
       "name": "@intentsolutionsio/quicknode-pack",
       "lastDay": 1,
       "lastWeek": 6,
       "lastMonth": 22
     },
     {
-      "name": "@intentsolutionsio/query-performance-analyzer",
-      "lastDay": 2,
-      "lastWeek": 6,
+      "name": "@intentsolutionsio/search-to-slack",
+      "lastDay": 1,
+      "lastWeek": 12,
       "lastMonth": 22
     },
     {
@@ -649,6 +655,12 @@
       "lastMonth": 22
     },
     {
+      "name": "@intentsolutionsio/compliance-checker",
+      "lastDay": 1,
+      "lastWeek": 6,
+      "lastMonth": 21
+    },
+    {
       "name": "@intentsolutionsio/deepgram-pack",
       "lastDay": 2,
       "lastWeek": 8,
@@ -658,12 +670,6 @@
       "name": "@intentsolutionsio/hootsuite-pack",
       "lastDay": 1,
       "lastWeek": 5,
-      "lastMonth": 21
-    },
-    {
-      "name": "@intentsolutionsio/infrastructure-as-code-generator",
-      "lastDay": 1,
-      "lastWeek": 6,
       "lastMonth": 21
     },
     {
@@ -679,27 +685,21 @@
       "lastMonth": 21
     },
     {
+      "name": "@intentsolutionsio/nft-rarity-analyzer",
+      "lastDay": 2,
+      "lastWeek": 9,
+      "lastMonth": 21
+    },
+    {
       "name": "@intentsolutionsio/podium-pack",
       "lastDay": 1,
       "lastWeek": 10,
       "lastMonth": 21
     },
     {
-      "name": "@intentsolutionsio/serpapi-pack",
-      "lastDay": 1,
+      "name": "@intentsolutionsio/finta-pack",
+      "lastDay": 3,
       "lastWeek": 8,
-      "lastMonth": 21
-    },
-    {
-      "name": "@intentsolutionsio/wondelai-web-typography",
-      "lastDay": 0,
-      "lastWeek": 4,
-      "lastMonth": 21
-    },
-    {
-      "name": "@intentsolutionsio/cross-chain-bridge-monitor",
-      "lastDay": 1,
-      "lastWeek": 5,
       "lastMonth": 20
     },
     {
@@ -715,6 +715,12 @@
       "lastMonth": 20
     },
     {
+      "name": "@intentsolutionsio/test-data-generator",
+      "lastDay": 1,
+      "lastWeek": 5,
+      "lastMonth": 20
+    },
+    {
       "name": "@intentsolutionsio/wondelai-hooked-ux",
       "lastDay": 0,
       "lastWeek": 3,
@@ -725,6 +731,12 @@
       "lastDay": 3,
       "lastWeek": 5,
       "lastMonth": 20
+    },
+    {
+      "name": "@intentsolutionsio/api-fuzzer",
+      "lastDay": 1,
+      "lastWeek": 4,
+      "lastMonth": 19
     },
     {
       "name": "@intentsolutionsio/api-versioning-manager",
@@ -742,6 +754,12 @@
       "name": "@intentsolutionsio/crypto-portfolio-tracker",
       "lastDay": 1,
       "lastWeek": 5,
+      "lastMonth": 19
+    },
+    {
+      "name": "@intentsolutionsio/fullstack-starter-pack",
+      "lastDay": 1,
+      "lastWeek": 6,
       "lastMonth": 19
     },
     {
@@ -771,12 +789,6 @@
     {
       "name": "@intentsolutionsio/api-migration-tool",
       "lastDay": 2,
-      "lastWeek": 8,
-      "lastMonth": 18
-    },
-    {
-      "name": "@intentsolutionsio/castai-pack",
-      "lastDay": 1,
       "lastWeek": 8,
       "lastMonth": 18
     },
@@ -823,12 +835,6 @@
       "lastMonth": 18
     },
     {
-      "name": "@intentsolutionsio/helm-chart-generator",
-      "lastDay": 1,
-      "lastWeek": 5,
-      "lastMonth": 18
-    },
-    {
       "name": "@intentsolutionsio/metrics-aggregator",
       "lastDay": 1,
       "lastWeek": 6,
@@ -847,6 +853,12 @@
       "lastMonth": 18
     },
     {
+      "name": "@intentsolutionsio/security-pro-pack",
+      "lastDay": 1,
+      "lastWeek": 6,
+      "lastMonth": 18
+    },
+    {
       "name": "@intentsolutionsio/snowflake-pack",
       "lastDay": 1,
       "lastWeek": 5,
@@ -859,19 +871,13 @@
       "lastMonth": 18
     },
     {
+      "name": "@intentsolutionsio/webhook-handler-creator",
+      "lastDay": 1,
+      "lastWeek": 6,
+      "lastMonth": 18
+    },
+    {
       "name": "@intentsolutionsio/wondelai-contagious",
-      "lastDay": 0,
-      "lastWeek": 3,
-      "lastMonth": 18
-    },
-    {
-      "name": "@intentsolutionsio/wondelai-design-everyday-things",
-      "lastDay": 0,
-      "lastWeek": 3,
-      "lastMonth": 18
-    },
-    {
-      "name": "@intentsolutionsio/wondelai-one-page-marketing",
       "lastDay": 0,
       "lastWeek": 3,
       "lastMonth": 18
@@ -919,9 +925,21 @@
       "lastMonth": 17
     },
     {
+      "name": "@intentsolutionsio/database-schema-designer",
+      "lastDay": 1,
+      "lastWeek": 4,
+      "lastMonth": 17
+    },
+    {
       "name": "@intentsolutionsio/e2e-test-framework",
       "lastDay": 1,
       "lastWeek": 4,
+      "lastMonth": 17
+    },
+    {
+      "name": "@intentsolutionsio/load-balancer-configurator",
+      "lastDay": 1,
+      "lastWeek": 7,
       "lastMonth": 17
     },
     {
@@ -943,6 +961,18 @@
       "lastMonth": 17
     },
     {
+      "name": "@intentsolutionsio/on-chain-analytics",
+      "lastDay": 1,
+      "lastWeek": 6,
+      "lastMonth": 17
+    },
+    {
+      "name": "@intentsolutionsio/palantir-pack",
+      "lastDay": 2,
+      "lastWeek": 10,
+      "lastMonth": 17
+    },
+    {
       "name": "@intentsolutionsio/service-mesh-configurator",
       "lastDay": 1,
       "lastWeek": 5,
@@ -955,13 +985,13 @@
       "lastMonth": 17
     },
     {
-      "name": "@intentsolutionsio/ssl-certificate-manager",
+      "name": "@intentsolutionsio/wondelai-blue-ocean-strategy",
       "lastDay": 0,
-      "lastWeek": 3,
+      "lastWeek": 4,
       "lastMonth": 17
     },
     {
-      "name": "@intentsolutionsio/wondelai-blue-ocean-strategy",
+      "name": "@intentsolutionsio/wondelai-negotiation",
       "lastDay": 0,
       "lastWeek": 4,
       "lastMonth": 17
@@ -991,15 +1021,9 @@
       "lastMonth": 16
     },
     {
-      "name": "@intentsolutionsio/gh-dash",
+      "name": "@intentsolutionsio/gas-fee-optimizer",
       "lastDay": 1,
-      "lastWeek": 4,
-      "lastMonth": 16
-    },
-    {
-      "name": "@intentsolutionsio/infrastructure-metrics-collector",
-      "lastDay": 1,
-      "lastWeek": 6,
+      "lastWeek": 5,
       "lastMonth": 16
     },
     {
@@ -1009,13 +1033,7 @@
       "lastMonth": 16
     },
     {
-      "name": "@intentsolutionsio/nosql-data-modeler",
-      "lastDay": 1,
-      "lastWeek": 4,
-      "lastMonth": 16
-    },
-    {
-      "name": "@intentsolutionsio/oraclecloud-pack",
+      "name": "@intentsolutionsio/log-analysis-tool",
       "lastDay": 1,
       "lastWeek": 6,
       "lastMonth": 16
@@ -1027,15 +1045,27 @@
       "lastMonth": 16
     },
     {
+      "name": "@intentsolutionsio/trading-strategy-backtester",
+      "lastDay": 1,
+      "lastWeek": 5,
+      "lastMonth": 16
+    },
+    {
       "name": "@intentsolutionsio/transfer-learning-adapter",
       "lastDay": 1,
       "lastWeek": 4,
       "lastMonth": 16
     },
     {
-      "name": "@intentsolutionsio/trading-strategy-backtester",
+      "name": "@intentsolutionsio/visual-regression-tester",
       "lastDay": 1,
-      "lastWeek": 5,
+      "lastWeek": 4,
+      "lastMonth": 16
+    },
+    {
+      "name": "@intentsolutionsio/wondelai-ios-hig-design",
+      "lastDay": 0,
+      "lastWeek": 4,
       "lastMonth": 16
     },
     {
@@ -1051,12 +1081,6 @@
       "lastMonth": 16
     },
     {
-      "name": "@intentsolutionsio/anomaly-detection-system",
-      "lastDay": 1,
-      "lastWeek": 5,
-      "lastMonth": 15
-    },
-    {
       "name": "@intentsolutionsio/bottleneck-detector",
       "lastDay": 1,
       "lastWeek": 6,
@@ -1066,6 +1090,12 @@
       "name": "@intentsolutionsio/capacity-planning-analyzer",
       "lastDay": 1,
       "lastWeek": 6,
+      "lastMonth": 15
+    },
+    {
+      "name": "@intentsolutionsio/ci-cd-pipeline-builder",
+      "lastDay": 1,
+      "lastWeek": 4,
       "lastMonth": 15
     },
     {
@@ -1081,15 +1111,15 @@
       "lastMonth": 15
     },
     {
-      "name": "@intentsolutionsio/cors-policy-validator",
-      "lastDay": 0,
-      "lastWeek": 3,
-      "lastMonth": 15
-    },
-    {
       "name": "@intentsolutionsio/database-migration-manager",
       "lastDay": 1,
       "lastWeek": 5,
+      "lastMonth": 15
+    },
+    {
+      "name": "@intentsolutionsio/database-partition-manager",
+      "lastDay": 1,
+      "lastWeek": 4,
       "lastMonth": 15
     },
     {
@@ -1129,21 +1159,15 @@
       "lastMonth": 15
     },
     {
-      "name": "@intentsolutionsio/mobile-app-tester",
-      "lastDay": 1,
-      "lastWeek": 6,
-      "lastMonth": 15
-    },
-    {
       "name": "@intentsolutionsio/navan-pack",
       "lastDay": 1,
       "lastWeek": 5,
       "lastMonth": 15
     },
     {
-      "name": "@intentsolutionsio/neurodivergent-visual-org",
+      "name": "@intentsolutionsio/onenote-pack",
       "lastDay": 1,
-      "lastWeek": 4,
+      "lastWeek": 7,
       "lastMonth": 15
     },
     {
@@ -1153,7 +1177,7 @@
       "lastMonth": 15
     },
     {
-      "name": "@intentsolutionsio/secrets-manager-integrator",
+      "name": "@intentsolutionsio/tweetclaw",
       "lastDay": 1,
       "lastWeek": 5,
       "lastMonth": 15
@@ -1183,18 +1207,6 @@
       "lastMonth": 14
     },
     {
-      "name": "@intentsolutionsio/api-contract-generator",
-      "lastDay": 1,
-      "lastWeek": 4,
-      "lastMonth": 14
-    },
-    {
-      "name": "@intentsolutionsio/api-mock-server",
-      "lastDay": 1,
-      "lastWeek": 5,
-      "lastMonth": 14
-    },
-    {
       "name": "@intentsolutionsio/api-rate-limiter",
       "lastDay": 1,
       "lastWeek": 6,
@@ -1213,27 +1225,9 @@
       "lastMonth": 14
     },
     {
-      "name": "@intentsolutionsio/arbitrage-opportunity-finder",
-      "lastDay": 1,
-      "lastWeek": 6,
-      "lastMonth": 14
-    },
-    {
       "name": "@intentsolutionsio/claude-memory-kit",
       "lastDay": 1,
       "lastWeek": 4,
-      "lastMonth": 14
-    },
-    {
-      "name": "@intentsolutionsio/clickup-pack",
-      "lastDay": 1,
-      "lastWeek": 7,
-      "lastMonth": 14
-    },
-    {
-      "name": "@intentsolutionsio/contract-test-validator",
-      "lastDay": 1,
-      "lastWeek": 5,
       "lastMonth": 14
     },
     {
@@ -1252,6 +1246,24 @@
       "name": "@intentsolutionsio/database-diff-tool",
       "lastDay": 1,
       "lastWeek": 6,
+      "lastMonth": 14
+    },
+    {
+      "name": "@intentsolutionsio/database-replication-manager",
+      "lastDay": 1,
+      "lastWeek": 5,
+      "lastMonth": 14
+    },
+    {
+      "name": "@intentsolutionsio/discovery-questionnaire",
+      "lastDay": 1,
+      "lastWeek": 4,
+      "lastMonth": 14
+    },
+    {
+      "name": "@intentsolutionsio/error-rate-monitor",
+      "lastDay": 1,
+      "lastWeek": 5,
       "lastMonth": 14
     },
     {
@@ -1285,6 +1297,12 @@
       "lastMonth": 14
     },
     {
+      "name": "@intentsolutionsio/resource-usage-tracker",
+      "lastDay": 1,
+      "lastWeek": 6,
+      "lastMonth": 14
+    },
+    {
       "name": "@intentsolutionsio/roi-calculator",
       "lastDay": 1,
       "lastWeek": 4,
@@ -1297,9 +1315,9 @@
       "lastMonth": 14
     },
     {
-      "name": "@intentsolutionsio/test-coverage-analyzer",
+      "name": "@intentsolutionsio/staking-rewards-optimizer",
       "lastDay": 1,
-      "lastWeek": 5,
+      "lastWeek": 6,
       "lastMonth": 14
     },
     {
@@ -1309,9 +1327,9 @@
       "lastMonth": 14
     },
     {
-      "name": "@intentsolutionsio/wondelai-refactoring-ui",
+      "name": "@intentsolutionsio/wondelai-traction-eos",
       "lastDay": 0,
-      "lastWeek": 3,
+      "lastWeek": 4,
       "lastMonth": 14
     },
     {
@@ -1339,6 +1357,12 @@
       "lastMonth": 13
     },
     {
+      "name": "@intentsolutionsio/b12-claude-plugin",
+      "lastDay": 1,
+      "lastWeek": 4,
+      "lastMonth": 13
+    },
+    {
       "name": "@intentsolutionsio/browser-compatibility-tester",
       "lastDay": 1,
       "lastWeek": 4,
@@ -1351,9 +1375,9 @@
       "lastMonth": 13
     },
     {
-      "name": "@intentsolutionsio/data-validation-engine",
+      "name": "@intentsolutionsio/cpu-usage-monitor",
       "lastDay": 1,
-      "lastWeek": 4,
+      "lastWeek": 5,
       "lastMonth": 13
     },
     {
@@ -1363,7 +1387,7 @@
       "lastMonth": 13
     },
     {
-      "name": "@intentsolutionsio/dataset-splitter",
+      "name": "@intentsolutionsio/data-validation-engine",
       "lastDay": 1,
       "lastWeek": 4,
       "lastMonth": 13
@@ -1375,19 +1399,31 @@
       "lastMonth": 13
     },
     {
+      "name": "@intentsolutionsio/dataset-splitter",
+      "lastDay": 1,
+      "lastWeek": 4,
+      "lastMonth": 13
+    },
+    {
       "name": "@intentsolutionsio/figma-pack",
       "lastDay": 1,
       "lastWeek": 4,
       "lastMonth": 13
     },
     {
-      "name": "@intentsolutionsio/liquidity-pool-analyzer",
+      "name": "@intentsolutionsio/hyperfocus",
       "lastDay": 1,
       "lastWeek": 5,
       "lastMonth": 13
     },
     {
-      "name": "@intentsolutionsio/log-aggregation-setup",
+      "name": "@intentsolutionsio/juicebox-pack",
+      "lastDay": 2,
+      "lastWeek": 8,
+      "lastMonth": 13
+    },
+    {
+      "name": "@intentsolutionsio/liquidity-pool-analyzer",
       "lastDay": 1,
       "lastWeek": 5,
       "lastMonth": 13
@@ -1411,18 +1447,6 @@
       "lastMonth": 13
     },
     {
-      "name": "@intentsolutionsio/speak-pack",
-      "lastDay": 1,
-      "lastWeek": 4,
-      "lastMonth": 13
-    },
-    {
-      "name": "@intentsolutionsio/test-orchestrator",
-      "lastDay": 1,
-      "lastWeek": 6,
-      "lastMonth": 13
-    },
-    {
       "name": "@intentsolutionsio/wondelai-crossing-the-chasm",
       "lastDay": 0,
       "lastWeek": 3,
@@ -1432,6 +1456,12 @@
       "name": "@intentsolutionsio/wondelai-jobs-to-be-done",
       "lastDay": 0,
       "lastWeek": 3,
+      "lastMonth": 13
+    },
+    {
+      "name": "@intentsolutionsio/wondelai-predictable-revenue",
+      "lastDay": 0,
+      "lastWeek": 4,
       "lastMonth": 13
     },
     {
@@ -1447,39 +1477,27 @@
       "lastMonth": 12
     },
     {
-      "name": "@intentsolutionsio/api-request-logger",
+      "name": "@intentsolutionsio/api-response-validator",
       "lastDay": 1,
       "lastWeek": 4,
       "lastMonth": 12
     },
     {
-      "name": "@intentsolutionsio/claude-never-forgets",
-      "lastDay": 1,
-      "lastWeek": 4,
-      "lastMonth": 12
-    },
-    {
-      "name": "@intentsolutionsio/cloud-cost-optimizer",
+      "name": "@intentsolutionsio/container-security-scanner",
       "lastDay": 1,
       "lastWeek": 5,
-      "lastMonth": 12
-    },
-    {
-      "name": "@intentsolutionsio/data-preprocessing-pipeline",
-      "lastDay": 1,
-      "lastWeek": 4,
-      "lastMonth": 12
-    },
-    {
-      "name": "@intentsolutionsio/database-deadlock-detector",
-      "lastDay": 1,
-      "lastWeek": 4,
       "lastMonth": 12
     },
     {
       "name": "@intentsolutionsio/database-index-advisor",
       "lastDay": 2,
       "lastWeek": 5,
+      "lastMonth": 12
+    },
+    {
+      "name": "@intentsolutionsio/database-deadlock-detector",
+      "lastDay": 1,
+      "lastWeek": 4,
       "lastMonth": 12
     },
     {
@@ -1492,6 +1510,12 @@
       "name": "@intentsolutionsio/evernote-pack",
       "lastDay": 1,
       "lastWeek": 5,
+      "lastMonth": 12
+    },
+    {
+      "name": "@intentsolutionsio/framecraft",
+      "lastDay": 1,
+      "lastWeek": 4,
       "lastMonth": 12
     },
     {
@@ -1513,21 +1537,9 @@
       "lastMonth": 12
     },
     {
-      "name": "@intentsolutionsio/posthog-pack",
-      "lastDay": 2,
-      "lastWeek": 5,
-      "lastMonth": 12
-    },
-    {
       "name": "@intentsolutionsio/shipwright",
       "lastDay": 1,
       "lastWeek": 5,
-      "lastMonth": 12
-    },
-    {
-      "name": "@intentsolutionsio/snapshot-test-manager",
-      "lastDay": 1,
-      "lastWeek": 4,
       "lastMonth": 12
     },
     {
@@ -1538,12 +1550,6 @@
     },
     {
       "name": "@intentsolutionsio/test-report-generator",
-      "lastDay": 1,
-      "lastWeek": 4,
-      "lastMonth": 12
-    },
-    {
-      "name": "@intentsolutionsio/wondelai-lean-startup",
       "lastDay": 1,
       "lastWeek": 4,
       "lastMonth": 12
@@ -1561,21 +1567,9 @@
       "lastMonth": 11
     },
     {
-      "name": "@intentsolutionsio/api-documentation-generator",
+      "name": "@intentsolutionsio/api-monitoring-dashboard",
       "lastDay": 1,
       "lastWeek": 4,
-      "lastMonth": 11
-    },
-    {
-      "name": "@intentsolutionsio/api-throttling-manager",
-      "lastDay": 1,
-      "lastWeek": 6,
-      "lastMonth": 11
-    },
-    {
-      "name": "@intentsolutionsio/api-security-scanner",
-      "lastDay": 1,
-      "lastWeek": 5,
       "lastMonth": 11
     },
     {
@@ -1603,6 +1597,12 @@
       "lastMonth": 11
     },
     {
+      "name": "@intentsolutionsio/database-documentation-gen",
+      "lastDay": 1,
+      "lastWeek": 4,
+      "lastMonth": 11
+    },
+    {
       "name": "@intentsolutionsio/database-security-scanner",
       "lastDay": 1,
       "lastWeek": 5,
@@ -1621,18 +1621,6 @@
       "lastMonth": 11
     },
     {
-      "name": "@intentsolutionsio/gitops-workflow-builder",
-      "lastDay": 1,
-      "lastWeek": 4,
-      "lastMonth": 11
-    },
-    {
-      "name": "@intentsolutionsio/hello-world",
-      "lastDay": 1,
-      "lastWeek": 4,
-      "lastMonth": 11
-    },
-    {
       "name": "@intentsolutionsio/jeremy-firebase",
       "lastDay": 1,
       "lastWeek": 5,
@@ -1645,13 +1633,13 @@
       "lastMonth": 11
     },
     {
-      "name": "@intentsolutionsio/owasp-compliance-checker",
+      "name": "@intentsolutionsio/persona-pack",
       "lastDay": 1,
-      "lastWeek": 6,
+      "lastWeek": 5,
       "lastMonth": 11
     },
     {
-      "name": "@intentsolutionsio/persona-pack",
+      "name": "@intentsolutionsio/recommendation-engine",
       "lastDay": 1,
       "lastWeek": 5,
       "lastMonth": 11
@@ -1675,9 +1663,9 @@
       "lastMonth": 11
     },
     {
-      "name": "@intentsolutionsio/synthetic-monitoring-setup",
+      "name": "@intentsolutionsio/terraform-module-builder",
       "lastDay": 1,
-      "lastWeek": 6,
+      "lastWeek": 5,
       "lastMonth": 11
     },
     {
@@ -1693,9 +1681,9 @@
       "lastMonth": 11
     },
     {
-      "name": "@intentsolutionsio/wondelai-ux-heuristics",
+      "name": "@intentsolutionsio/wondelai-top-design",
       "lastDay": 0,
-      "lastWeek": 4,
+      "lastWeek": 3,
       "lastMonth": 11
     },
     {
@@ -1723,15 +1711,15 @@
       "lastMonth": 10
     },
     {
-      "name": "@intentsolutionsio/compliance-report-generator",
-      "lastDay": 0,
-      "lastWeek": 4,
-      "lastMonth": 10
-    },
-    {
       "name": "@intentsolutionsio/coderabbit-pack",
       "lastDay": 2,
       "lastWeek": 5,
+      "lastMonth": 10
+    },
+    {
+      "name": "@intentsolutionsio/compliance-report-generator",
+      "lastDay": 0,
+      "lastWeek": 4,
       "lastMonth": 10
     },
     {
@@ -1765,6 +1753,12 @@
       "lastMonth": 10
     },
     {
+      "name": "@intentsolutionsio/feature-engineering-toolkit",
+      "lastDay": 1,
+      "lastWeek": 4,
+      "lastMonth": 10
+    },
+    {
       "name": "@intentsolutionsio/fireflies-pack",
       "lastDay": 2,
       "lastWeek": 5,
@@ -1772,6 +1766,12 @@
     },
     {
       "name": "@intentsolutionsio/framer-pack",
+      "lastDay": 1,
+      "lastWeek": 4,
+      "lastMonth": 10
+    },
+    {
+      "name": "@intentsolutionsio/model-versioning-tracker",
       "lastDay": 1,
       "lastWeek": 4,
       "lastMonth": 10
@@ -1795,15 +1795,21 @@
       "lastMonth": 10
     },
     {
+      "name": "@intentsolutionsio/regression-test-tracker",
+      "lastDay": 1,
+      "lastWeek": 4,
+      "lastMonth": 10
+    },
+    {
       "name": "@intentsolutionsio/real-user-monitoring",
       "lastDay": 1,
       "lastWeek": 6,
       "lastMonth": 10
     },
     {
-      "name": "@intentsolutionsio/regression-test-tracker",
+      "name": "@intentsolutionsio/stored-procedure-generator",
       "lastDay": 1,
-      "lastWeek": 4,
+      "lastWeek": 3,
       "lastMonth": 10
     },
     {
@@ -1861,6 +1867,12 @@
       "lastMonth": 8
     },
     {
+      "name": "@intentsolutionsio/apple-notes-pack",
+      "lastDay": 1,
+      "lastWeek": 6,
+      "lastMonth": 8
+    },
+    {
       "name": "@intentsolutionsio/database-test-manager",
       "lastDay": 1,
       "lastWeek": 4,
@@ -1889,6 +1901,12 @@
       "lastDay": 1,
       "lastWeek": 5,
       "lastMonth": 7
+    },
+    {
+      "name": "@intentsolutionsio/stackblitz-pack",
+      "lastDay": 1,
+      "lastWeek": 4,
+      "lastMonth": 6
     }
   ]
 }
