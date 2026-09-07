@@ -62,14 +62,14 @@ ccpi update                     # Pull latest versions
 
 ### 📦 Live npm Downloads
 
-Across **325 published packages** in the 
+Across **317 published packages** in the 
 [claude-code-plugins](https://www.npmjs.com/~jeremylongshore) namespace. Updated daily by GitHub Actions.
 
 | Window | Downloads |
 |--------|----------:|
-| Last 24 hours | 527 |
-| Last 7 days | 2,686 |
-| Last 30 days | 10,050 |
+| Last 24 hours | 514 |
+| Last 7 days | 2,659 |
+| Last 30 days | 9,809 |
 
 **Top 10 by last 30 days:**
 
@@ -86,7 +86,7 @@ Across **325 published packages** in the
 | 9 | [`@intentsolutionsio/langchain-py-pack`](https://www.npmjs.com/package/@intentsolutionsio/langchain-py-pack) | 121 |
 | 10 | [`@intentsolutionsio/neural-network-builder`](https://www.npmjs.com/package/@intentsolutionsio/neural-network-builder) | 113 |
 
-<sub>Last refreshed 2026-09-06T05:05:18.164Z.</sub>
+<sub>Last refreshed 2026-09-07T05:07:24.901Z.</sub>
 
 <!-- NPM-STATS:END -->
 
