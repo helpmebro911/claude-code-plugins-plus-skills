@@ -62,31 +62,31 @@ ccpi update                     # Pull latest versions
 
 ### 📦 Live npm Downloads
 
-Across **305 published packages** in the 
+Across **309 published packages** in the 
 [claude-code-plugins](https://www.npmjs.com/~jeremylongshore) namespace. Updated daily by GitHub Actions.
 
 | Window | Downloads |
 |--------|----------:|
-| Last 24 hours | 420 |
-| Last 7 days | 1,811 |
-| Last 30 days | 9,029 |
+| Last 24 hours | 454 |
+| Last 7 days | 1,791 |
+| Last 30 days | 10,104 |
 
 **Top 10 by last 30 days:**
 
 | # | Package | Last 30d |
 |---|---------|---------:|
-| 1 | [`@intentsolutionsio/groq-pack`](https://www.npmjs.com/package/@intentsolutionsio/groq-pack) | 712 |
-| 2 | [`@intentsolutionsio/mistral-pack`](https://www.npmjs.com/package/@intentsolutionsio/mistral-pack) | 270 |
-| 3 | [`@intentsolutionsio/databricks-pack`](https://www.npmjs.com/package/@intentsolutionsio/databricks-pack) | 203 |
-| 4 | [`@intentsolutionsio/wallet-security-auditor`](https://www.npmjs.com/package/@intentsolutionsio/wallet-security-auditor) | 153 |
-| 5 | [`@intentsolutionsio/openbb-terminal`](https://www.npmjs.com/package/@intentsolutionsio/openbb-terminal) | 116 |
-| 6 | [`@intentsolutionsio/penetration-tester`](https://www.npmjs.com/package/@intentsolutionsio/penetration-tester) | 113 |
-| 7 | [`@intentsolutionsio/ccpi`](https://www.npmjs.com/package/@intentsolutionsio/ccpi) | 101 |
-| 8 | [`@intentsolutionsio/crypto-tax-calculator`](https://www.npmjs.com/package/@intentsolutionsio/crypto-tax-calculator) | 88 |
-| 9 | [`@intentsolutionsio/obsidian-pack`](https://www.npmjs.com/package/@intentsolutionsio/obsidian-pack) | 85 |
-| 10 | [`@intentsolutionsio/geepers-agents`](https://www.npmjs.com/package/@intentsolutionsio/geepers-agents) | 84 |
+| 1 | [`@intentsolutionsio/openrouter-pack`](https://www.npmjs.com/package/@intentsolutionsio/openrouter-pack) | 1,037 |
+| 2 | [`@intentsolutionsio/groq-pack`](https://www.npmjs.com/package/@intentsolutionsio/groq-pack) | 584 |
+| 3 | [`@intentsolutionsio/mistral-pack`](https://www.npmjs.com/package/@intentsolutionsio/mistral-pack) | 251 |
+| 4 | [`@intentsolutionsio/langchain-py-pack`](https://www.npmjs.com/package/@intentsolutionsio/langchain-py-pack) | 147 |
+| 5 | [`@intentsolutionsio/shopify-pack`](https://www.npmjs.com/package/@intentsolutionsio/shopify-pack) | 134 |
+| 6 | [`@intentsolutionsio/neural-network-builder`](https://www.npmjs.com/package/@intentsolutionsio/neural-network-builder) | 130 |
+| 7 | [`@intentsolutionsio/penetration-tester`](https://www.npmjs.com/package/@intentsolutionsio/penetration-tester) | 109 |
+| 8 | [`@intentsolutionsio/openbb-terminal`](https://www.npmjs.com/package/@intentsolutionsio/openbb-terminal) | 100 |
+| 9 | [`@intentsolutionsio/klingai-pack`](https://www.npmjs.com/package/@intentsolutionsio/klingai-pack) | 98 |
+| 10 | [`@intentsolutionsio/elevenlabs-pack`](https://www.npmjs.com/package/@intentsolutionsio/elevenlabs-pack) | 90 |
 
-<sub>Last refreshed 2026-09-10T05:08:09.914Z.</sub>
+<sub>Last refreshed 2026-09-11T05:06:15.972Z.</sub>
 
 <!-- NPM-STATS:END -->
 
