@@ -62,31 +62,31 @@ ccpi update                     # Pull latest versions
 
 ### 📦 Live npm Downloads
 
-Across **302 published packages** in the 
+Across **319 published packages** in the 
 [claude-code-plugins](https://www.npmjs.com/~jeremylongshore) namespace. Updated daily by GitHub Actions.
 
 | Window | Downloads |
 |--------|----------:|
-| Last 24 hours | 282 |
-| Last 7 days | 2,184 |
-| Last 30 days | 12,212 |
+| Last 24 hours | 194 |
+| Last 7 days | 1,548 |
+| Last 30 days | 11,037 |
 
 **Top 10 by last 30 days:**
 
 | # | Package | Last 30d |
 |---|---------|---------:|
-| 1 | [`@intentsolutionsio/claude-pack`](https://www.npmjs.com/package/@intentsolutionsio/claude-pack) | 694 |
-| 2 | [`@intentsolutionsio/databricks-pack`](https://www.npmjs.com/package/@intentsolutionsio/databricks-pack) | 338 |
-| 3 | [`@intentsolutionsio/groq-pack`](https://www.npmjs.com/package/@intentsolutionsio/groq-pack) | 325 |
-| 4 | [`@intentsolutionsio/shopify-pack`](https://www.npmjs.com/package/@intentsolutionsio/shopify-pack) | 269 |
-| 5 | [`@intentsolutionsio/neural-network-builder`](https://www.npmjs.com/package/@intentsolutionsio/neural-network-builder) | 264 |
-| 6 | [`@intentsolutionsio/supabase-pack`](https://www.npmjs.com/package/@intentsolutionsio/supabase-pack) | 248 |
-| 7 | [`@intentsolutionsio/clickhouse-pack`](https://www.npmjs.com/package/@intentsolutionsio/clickhouse-pack) | 222 |
-| 8 | [`@intentsolutionsio/klingai-pack`](https://www.npmjs.com/package/@intentsolutionsio/klingai-pack) | 187 |
-| 9 | [`@intentsolutionsio/jeremy-adk-orchestrator`](https://www.npmjs.com/package/@intentsolutionsio/jeremy-adk-orchestrator) | 183 |
-| 10 | [`@intentsolutionsio/jeremy-vertex-engine`](https://www.npmjs.com/package/@intentsolutionsio/jeremy-vertex-engine) | 177 |
+| 1 | [`@intentsolutionsio/openrouter-pack`](https://www.npmjs.com/package/@intentsolutionsio/openrouter-pack) | 476 |
+| 2 | [`@intentsolutionsio/neural-network-builder`](https://www.npmjs.com/package/@intentsolutionsio/neural-network-builder) | 270 |
+| 3 | [`@intentsolutionsio/shopify-pack`](https://www.npmjs.com/package/@intentsolutionsio/shopify-pack) | 264 |
+| 4 | [`@intentsolutionsio/clickhouse-pack`](https://www.npmjs.com/package/@intentsolutionsio/clickhouse-pack) | 228 |
+| 5 | [`@intentsolutionsio/jeremy-adk-orchestrator`](https://www.npmjs.com/package/@intentsolutionsio/jeremy-adk-orchestrator) | 182 |
+| 6 | [`@intentsolutionsio/klingai-pack`](https://www.npmjs.com/package/@intentsolutionsio/klingai-pack) | 181 |
+| 7 | [`@intentsolutionsio/jeremy-vertex-engine`](https://www.npmjs.com/package/@intentsolutionsio/jeremy-vertex-engine) | 179 |
+| 8 | [`@intentsolutionsio/wallet-security-auditor`](https://www.npmjs.com/package/@intentsolutionsio/wallet-security-auditor) | 176 |
+| 9 | [`@intentsolutionsio/elevenlabs-pack`](https://www.npmjs.com/package/@intentsolutionsio/elevenlabs-pack) | 173 |
+| 10 | [`@intentsolutionsio/intercom-pack`](https://www.npmjs.com/package/@intentsolutionsio/intercom-pack) | 164 |
 
-<sub>Last refreshed 2026-10-12T06:24:03.857Z.</sub>
+<sub>Last refreshed 2026-10-13T07:12:33.422Z.</sub>
 
 <!-- NPM-STATS:END -->
 
